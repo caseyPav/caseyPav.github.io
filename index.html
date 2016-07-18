@@ -23,12 +23,10 @@
     <!-- Theme CSS -->
     <link href="css/grayscale.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <style>
+        h1 {width: 800px; font-size:50px;}
+        .box { width: 200px; height:200px; font-size:30px; color:white; background-color: black; border:5px solid red; float:left; margin-left:30px; text-align:center; line-height:40px; cursor:pointer; }
+    </style>
 
 </head>
 
@@ -100,19 +98,18 @@
 
 <!-- Contact Section -->
 <section id="contact" class="container content-section text-center">
-    <div class="row">
+    <div class="row" >
         <div class="col-lg-8 col-lg-offset-2">
-            <h1>Contact Casey</h1>
+            <h1 data-box2d-passive="true">Contact Casey</h1>
 
-            <code>$('div').box2d({'x-velocity':10});</code><br>
-            <span class="box2d github" data-box2d-restitution="1"
-                  data-box2d-shape="circle" target="_blank"><p>Hire me! ...or just say hello</p></span>
 
-            <p class="glyphicon glyphicon-phone-alt"> 330.519.9281 </p>
+            <div class="box">Hire me! ...or just say hello</div>
+
+            <p class="glyphicon glyphicon-phone-alt box"> 330.519.9281 </p>
 
             <ul class="list-inline banner-social-buttons">
                 <li>
-                    <span class="box2d"><a href="https://twitter.com/caseyPav85" class="btn btn-default btn-lg"><i
+                    <span class="box"><a href="https://twitter.com/caseyPav85" class="btn btn-default btn-lg"><i
                             class="fa fa-twitter fa-fw"></i> <span class="network-name"></span></a></span>
                 </li>
                 <li>
@@ -143,25 +140,10 @@
 <script type="text/javascript" src="js/Box2D.js"></script>
 <script src="js/grayscale.js"></script>
 <script>
-    $('document').ready(function () {
-        window.setTimeout(function () {
-            $("h1, code, .box2d").box2d({'y-velocity': 9.8, 'x-velocity': -0.05, 'debug': false});
-        }, 500);
+    $(document).ready(function() {
+        $("h1, div")
+                .box2d({'y-velocity':0 });
     });
-</script>
-<script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-34880400-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function () {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-    })();
 </script>
 </body>
 
