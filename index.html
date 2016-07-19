@@ -21,6 +21,8 @@
         }
 
         body {
+            min-width: 100%;
+            min-height: 100%;
             background: #696969;
             color: #2b88ff;
             text-decoration: none;
@@ -63,7 +65,7 @@
             border: none;
         }
 
-        #nameheader{
+        #nameheader {
             width: 320px;
             margin: 0 auto;
             border: none;
@@ -73,6 +75,7 @@
             font-family: "Open Sans";
             font-size: 40px;
         }
+
         #github {
             width: 64px;
             border-radius: 50%;
@@ -108,29 +111,35 @@
             cursor: pointer;
         }
 
-        code {
-            font-family: 'Source Code Pro', sans-serif;
-            font-size: 15px;
-        }
+
+
+
+
     </style>
 </head>
 <body>
+    <img data-box2d-static="true" id="nameheader" src="./examples/img/name.png" width="280px" height="50px"/>
+    <br>
+    <br>
 
-<img data-box2d-static="true" id="nameheader" src="./examples/img/name.png" width="280px" height="50px"/>
+    <img data-box2d-static="true" id="nameheader" src="./examples/img/text1.svg" width="220px" height="50px"/>
 
-<a href="https://github.com/caseyPav" class="box2d" id="github" data-box2d-restitution="1" data-box2d-shape="circle"
-   target="_blank"><img src="examples/img/github-icon-black.svg" width="64px" height="64px"></a>
-<a href="https://github.com/caseyPav" class="box2d" id="linkedIn" data-box2d-restitution="1" data-box2d-shape="circle"
-   target="_blank"><img src="examples/img/linkedin_icon.png" width="64px" height="64px"></a>
-<a href="https://github.com/caseyPav" class="box2d" id="twitter" data-box2d-restitution="1" data-box2d-shape="circle"
-   target="_blank"><img src="examples/img/twitter-bird-vector-400x400.png" width="64px" height="64px"></a>
-<span class="box2d">Hey</span> <span class="box2d">...</span><br>
+    <a href="https://github.com/caseyPav" class="box2d" id="github" data-box2d-restitution="1" data-box2d-shape="circle"
+       target="_blank"><img src="examples/img/github-icon-black.svg" width="64px" height="64px"></a>
+    <a href="https://github.com/caseyPav" class="box2d" id="linkedIn" data-box2d-restitution="1"
+       data-box2d-shape="circle"
+       target="_blank"><img src="examples/img/linkedin_icon.png" width="64px" height="64px"></a>
+    <a href="https://github.com/caseyPav" class="box2d" id="twitter" data-box2d-restitution="1"
+       data-box2d-shape="circle"
+       target="_blank"><img src="examples/img/twitter-bird-vector-400x400.png" width="64px" height="64px"></a>
+    <span class="box2d">Hey</span> <span class="box2d">...</span><br>
 
-<span class="box2d"> is a developer</span><br>
-<span class="box2d">who wants to work for you</span><br>
+    <span class="box2d"> is a developer</span><br>
+    <span class="box2d">who wants to work for you</span><br>
 
-<span class="box2d">more text</span><br>
-<span class="box2d">Casey Pavelko</span><br>
+    <span class="box2d">more text</span><br>
+    <span class="box2d">Casey Pavelko</span><br>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script src="./js/lib/jquery.box2d.min.js"></script>

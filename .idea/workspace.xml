@@ -68,8 +68,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="103" column="9" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
+            <state relative-caret-position="425">
+              <caret line="121" column="8" selection-start-line="121" selection-start-column="8" selection-end-line="121" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -133,8 +133,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1366" />
-    <option name="y" value="24" />
+    <option name="x" value="1471" />
+    <option name="y" value="63" />
     <option name="width" value="1920" />
     <option name="height" value="1056" />
   </component>
@@ -390,7 +390,7 @@
       <updated>1468884118296</updated>
       <workItem from="1468884119461" duration="3980000" />
       <workItem from="1468893744221" duration="13449000" />
-      <workItem from="1468938836957" duration="5299000" />
+      <workItem from="1468938836957" duration="8217000" />
     </task>
     <task id="LOCAL-00001" summary="right js this time">
       <created>1468884291772</created>
@@ -417,10 +417,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22734000" />
+    <option name="totallyTimeSpent" value="25652000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1366" y="24" width="1920" height="1056" extended-state="0" />
+    <frame x="1471" y="63" width="1920" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18766473" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -741,8 +741,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="103" column="9" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
+        <state relative-caret-position="425">
+          <caret line="121" column="8" selection-start-line="121" selection-start-column="8" selection-end-line="121" selection-end-column="8" />
           <folding />
         </state>
       </provider>
