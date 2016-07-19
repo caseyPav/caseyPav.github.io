@@ -1,337 +1,155 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-    <title>Box2D DOM animation in Javascript CSS3</title>
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans|Poiret+One" rel="stylesheet">
-    <style type="text/css">
+    <!-- change this so that scrolling on ipad i unecessary -->
+    <meta name="viewport" content="height=device-height,width=device-width,initial-scale=0.8,maximum-scale=1.0"/>
+    <title>box2d-jquery by fullstackoptimization.com</title>
+    <meta name="description"
+          content="Transform your DOM into an awesome 2D physical world! Box2d-jquery is an easy-to-use wrapper around box2d-web. Just try it!">
+    <link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300' rel='stylesheet' type='text/css'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="canonical" href="http://www.fullstackoptimization.com/box2d-jquery/">
+    <meta name="robots" content="index, follow">
+    <style>
+        @import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+        @import url(http://fonts.googleapis.com/css?family=Open+Sans:400);
+        @import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
 
         body {
-            background-color: #696969;
+            border: 0px solid #696969;
         }
 
-        body, div {
-            margin: 0;
-            padding: 0;
-            border: none;
+        body {
+            background: #696969;
             color: #2b88ff;
-            font-family: "Noto+Sans";
-            font-size: 24px;
-        }
-
-        /* Set translateZ to trigger HW acc for CSS3 transforms */
-        #container {
-            position: absolute;
-            left: 0;
-            top: 0;
-            -webkit-transform: translate3d(0, 0, 1px);
-            -o-transform: translate3d(0, 0, 1px);
-            -moz-transform: translate3d(0, 0, 1px);
-            -ms-transform: translate3d(0, 0, 1px);
-            transform: translate3d(0, 0, 1px);
-            -webkit-perspective: 1000;
-            -webkit-backface-visibility: hidden;
-        }
-
-        #container {
-            -webkit-transition-property: -webkit-transform;
-            -webkit-transition-duration: 0.1;
-        }
-
-        /* Styles for the experiment GUI */
-        .panel {
-            font-size: 16px;
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 360px;
-            z-index: 2;
-            background-color: #555;
-            padding: 10px;
-        }
-
-        @media screen and (max-width: 600px) {
-            .panel {
-                width: 250px;
-                font-size: 10px;
-            }
-        }
-
-        /* Styles for illustrating the example */
-        a {
-            color: #1d9b6c;
             text-decoration: none;
+            text-align: center;
+            font-family: "Open Sans";
+            font-size: 16px;
         }
 
-        .mutable > * {
-            margin: 10px;
+        a {
+            color: #2b88ff;
+            text-decoration: underline;
         }
 
-        .mutable {
+        a:hover, a:visited, a:active {
+            color: #2b88ff;
+            text-decoration: underline;
+
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        [onclick] {
+            color: #2b88ff;
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-size: 44px;
+            font-weight: 700;
+            line-height: 24px;
+            margin-top: 24px;
+            width: 220px;
+            text-decoration: none !important;
+        }
+
+        h2 a {
+            text-decoration: none !important;
+        }
+
+        div, img, h2, h1, hr, span, code {
+            max-width: 320px;
+            margin: 0 auto;
+            border: none;
+        }
+
+        .normal {
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 22px;
+            line-height: 12px;
+            text-decoration: none !important;
+        }
+
+        #europe {
+            font-size: 42px;
+            font-family: 'RokkittLight', 'Rokkitt', sans-serif;
+        }
+
+        .github {
+            width: 64px;
+            border-radius: 50%;
             position: absolute;
-            border-radius: 25px;
-            /* border: 1px solid #FFF; */
+            top: 100px;
+            right: 40px;
+            border-radius: 50%;
+            border: 2px solid #696969 !important;
         }
 
+        .box2d, h1, code {
+            cursor: hand;
+            cursor: pointer;
+        }
 
+        code {
+            font-family: 'Source Code Pro', sans-serif;
+            font-size: 15px;
+        }
     </style>
-    <script type="text/javascript" async="" src="./Box2D DOM animation in Javascript CSS3_files/ga.js"></script>
-    <script type="text/javascript">
+</head>
+<body>
 
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-745050-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-
-    </script>
-    <script type="text/javascript">
-        function resize_canvas() {
-            canvas = document.getElementById("canvas");
-            if (canvas.width < window.innerWidth) {
-                canvas.width = window.innerWidth;
-            }
-
-            if (canvas.height < window.innerHeight) {
-                canvas.height = window.innerHeight;
-            }
-        }
-    </script>
+<a href="https://github.com/caseyPav" class="box2d github" data-box2d-restitution="1" data-box2d-shape="circle"
+   target="_blank"><img src="examples/img/github-icon-black.svg" width="64px" height="64px"></a>
+<a href="https://github.com/caseyPav" class="box2d github" data-box2d-restitution="1" data-box2d-shape="circle"
+   target="_blank"><img src="examples/img/linkedin_icon.png" width="64px" height="64px"></a>
+<a href="https://github.com/caseyPav" class="box2d github" data-box2d-restitution="1" data-box2d-shape="circle"
+   target="_blank"><img src="examples/img/twitter-bird-vector-400x400.png" width="64px" height="64px"></a>
+<span class="box2d">Hey</span> <span class="box2d">...</span><br>
 
 
-<body onload="setTimeout(init,5000);" screen_capture_injected="true">
-<canvas id="canvas" width="100" height="100"></canvas>
-<div class="mutable">
-<a  id="resetButton">Reset Page</a>
-</div>
+<h1 style="width:240px;">Casey Pavelko</h1><br>
 
-<div class="mutable" id="container" style="width:100px;top:25px;left:25px;height:50px;">
-    <article>
+<span class="box2d"> is a developer</span><br>
+<span class="box2d">who wants to work for you</span><br>
 
-        <div class="mutable" style="width:590px;top:140px;left:220px;height:200px;">
-            <p>Casey is a developer looking for work! He enjoys making the task of making a personal webpage way more
-                difficult than it needs to be... and kayaking. </p>
-        </div>
+<span class="box2d">more text</span><br>
+<span class="box2d">Casey Pavelko</span><br>
 
-        <div class="mutable" style="width:70px;top:400px;left:280px;height:70px;">
-            <a href="https://linkedin.com/in/casey-pavelko-655126125"/>
-            <img src="./Box2D DOM animation in Javascript CSS3_files/linkedin_icon.png" width="65" height="65">
-        </div>
-        <div class="mutable" style="width:70px;top:400px;left:380px;height:70px;">
-            <a href="https://twitter.com/caseyPav85"/>
-            <img src="./Box2D DOM animation in Javascript CSS3_files/twitter-bird-vector-400x400.png" width="65"
-                 height="65">
-        </div>
-        <div class="mutable" style="width:70px;top:400px;left:480px;height:70px;">
-            <a href="https://github.com/caseyPav"/>
-            <img src="./Box2D DOM animation in Javascript CSS3_files/github-icon-black.svg" width="65" height="65">
-        </div>
+<br>
+<br>
+<br>
+<br>
 
 
-    </article>
-</div>
-
-
-<script type="text/javascript" src="./Box2D DOM animation in Javascript CSS3_files/Box2dWeb-2.1.a.3.js"></script>
-<script type="text/javascript" src="./Box2D DOM animation in Javascript CSS3_files/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="./Box2D DOM animation in Javascript CSS3_files/RequestAnimationFrame.js"></script>
-<script type="text/javascript" src="./Box2D DOM animation in Javascript CSS3_files/MouseAndTouch.js"></script>
-
-<script type="text/javascript">
-    // Keep a reference to the Box2D World
-    var world;
-
-    // The scale between Box2D units and pixels
-    var SCALE = 30;
-
-    // Multiply to convert degrees to radians.
-    var D2R = Math.PI / 180;
-
-    // Multiply to convert radians to degrees.
-    var R2D = 180 / Math.PI;
-
-    // 360 degrees in radians.
-    var PI2 = Math.PI * 2;
-    var interval;
-
-    //Cache the canvas DOM reference
-    var canvas;
-
-    //Are we debug drawing
-    var debug = false;
-
-    // Shorthand "imports"
-    var b2Vec2 = Box2D.Common.Math.b2Vec2,
-            b2BodyDef = Box2D.Dynamics.b2BodyDef,
-            b2AABB = Box2D.Collision.b2AABB,
-            b2Body = Box2D.Dynamics.b2Body,
-            b2FixtureDef = Box2D.Dynamics.b2FixtureDef,
-            b2Fixture = Box2D.Dynamics.b2Fixture,
-            b2World = Box2D.Dynamics.b2World,
-            b2MassData = Box2D.Collision.Shapes.b2MassData,
-            b2PolygonShape = Box2D.Collision.Shapes.b2PolygonShape,
-            b2CircleShape = Box2D.Collision.Shapes.b2CircleShape,
-            b2DebugDraw = Box2D.Dynamics.b2DebugDraw,
-            b2MouseJointDef = Box2D.Dynamics.Joints.b2MouseJointDef,
-            b2EdgeShape = Box2D.Collision.Shapes.b2EdgeShape;
-
-    function init() {
-
-        //Create the Box2D World with horisontal and vertical gravity (10 is close enough to 9.8)
-        world = new b2World(
-                new b2Vec2(0, 10) //gravity
-                , true //allow sleep
-        );
-
-        //setup debug draw
-        var debugDraw = new b2DebugDraw();
-        canvas = $("#canvas");
-        debugDraw.SetSprite(canvas[0].getContext("2d"));
-        debugDraw.SetDrawScale(SCALE);
-        debugDraw.SetFillAlpha(0.3);
-        debugDraw.SetLineThickness(1.0);
-        debugDraw.SetFlags(b2DebugDraw.e_shapeBit | b2DebugDraw.e_jointBit);
-        world.SetDebugDraw(debugDraw);
-
-        //Create DOB OBjects
-        createDOMObjects();
-
-        //Make sure that the screen canvas for debug drawing matches the window size
-        resizeHandler();
-        $(window).bind('resize', resizeHandler);
-
-        //Simple solution; reload to reset
-        $("#resetButton").click(function () {
-            document.location.reload();
-        });
-
-        $("#debugDraw").click(function () {
-            if ($("#debugDraw:checked").val()) {
-                debug = true;
-            } else {
-                debug = false;
-                canvas.width = canvas.width;
-            }
-            $("article").animate({opacity: debug ? 0.2 : 1}, 1000);
-        })
-
-        $("#removeText").click(function () {
-            $(".panel p").hide()
-        });
-
-        //Create the ground
-        var w = $(window).width();
-        var h = $(window).height();
-
-        createBox(0, h, w, 5, true);
-        createBox(0, 0, 5, h, true);
-        createBox(w, 0, 5, h, true);
-
-        //Do one animation interation and start animating
-        interval = setInterval(update, 1000 / 60);
-        update();
-    }
-
-    function createDOMObjects() {
-        //iterate all div elements and create them in the Box2D system
-        $("#container div").each(function (a, b) {
-            var domObj = $(b);
-            var domPos = $(b).position();
-            var width = domObj.width() / 2;
-            var height = domObj.height() / 2
-
-            var x = (domPos.left) + width;
-            var y = (domPos.top) + height;
-            var body = createBox(x, y, width, height);
-            body.m_userData = {domObj: domObj, width: width, height: height};
-
-            //Reset DOM object position for use with CSS3 positioning
-            domObj.css({'left': '0px', 'top': '0px'});
-        });
-    }
-
-    function createBox(x, y, width, height, static) {
-        var bodyDef = new b2BodyDef;
-        bodyDef.type = static ? b2Body.b2_staticBody : b2Body.b2_dynamicBody;
-        bodyDef.position.x = x / SCALE;
-        bodyDef.position.y = y / SCALE
-
-        var fixDef = new b2FixtureDef;
-        fixDef.density = 1.5;
-        fixDef.friction = 0.3;
-        fixDef.restitution = 0.4;
-
-        fixDef.shape = new b2PolygonShape;
-        fixDef.shape.SetAsBox(width / SCALE, height / SCALE);
-        return world.CreateBody(bodyDef).CreateFixture(fixDef);
-    }
-
-    //Animate DOM objects
-    function drawDOMObjects() {
-        var i = 0;
-        for (var b = world.m_bodyList; b; b = b.m_next) {
-            for (var f = b.m_fixtureList; f; f = f.m_next) {
-                if (f.m_userData) {
-                    //Retrieve positions and rotations from the Box2d world
-                    var x = Math.floor((f.m_body.m_xf.position.x * SCALE) - f.m_userData.width);
-                    var y = Math.floor((f.m_body.m_xf.position.y * SCALE) - f.m_userData.height);
-
-                    //CSS3 transform does not like negative values or infitate decimals
-                    var r = Math.round(((f.m_body.m_sweep.a + PI2) % PI2) * R2D * 100) / 100;
-
-                    var css = {
-                        '-webkit-transform': 'translate(' + x + 'px,' + y + 'px) rotate(' + r + 'deg)',
-                        '-moz-transform': 'translate(' + x + 'px,' + y + 'px) rotate(' + r + 'deg)',
-                        '-ms-transform': 'translate(' + x + 'px,' + y + 'px) rotate(' + r + 'deg)',
-                        '-o-transform': 'translate(' + x + 'px,' + y + 'px) rotate(' + r + 'deg)',
-                        'transform': 'translate(' + x + 'px,' + y + 'px) rotate(' + r + 'deg)'
-                    };
-
-                    f.m_userData.domObj.css(css);
-                }
-            }
-        }
-    }
-    ;
-
-    //Method for animating
-    function update() {
-        //I tried to use this cross browser animation snippet from Paul Irish, but it killed the performance/timing.
-        //Ill have to look more at it later, when I have the time.
-        //requestAnimFrame(update);
-
-        updateMouseDrag();
-
-        world.Step(
-                1 / 60 //frame-rate
-                , 10 //velocity iterations
-                , 10 //position iterations
-        );
-
-        //If you experience strange results, enable the debug drawing
-        if (debug) {
-            world.DrawDebugData();
-        }
-
-        drawDOMObjects();
-
-        world.ClearForces();
-    }
-
-    //Keep the canvas size correct for debug drawing
-    function resizeHandler() {
-        canvas.attr('width', $(window).width());
-        canvas.attr('height', $(window).height());
-    }
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="./js/lib/jquery.box2d.min.js"></script>
+<script>
+    $('document').ready(function () {
+        window.setTimeout(function () {
+            $("h1, code, .box2d").box2d({'y-velocity': 9.8, 'x-velocity': -0.05, 'debug': false});
+        }, 500);
+    });
 </script>
-<script type="text/javascript" src="./Box2D DOM animation in Javascript CSS3_files/DebugMouseDrag.js"></script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-34880400-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
 </body>
 </html>
