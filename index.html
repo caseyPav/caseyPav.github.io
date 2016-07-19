@@ -24,8 +24,24 @@
     <link href="css/grayscale.css" rel="stylesheet">
 
     <style>
-        h1 {width: 800px; font-size:50px;}
-        .box { width: 200px; height:200px; font-size:30px; color:white; background-color: black; border:5px solid red; float:left; margin-left:30px; text-align:center; line-height:40px; cursor:pointer; }
+        h1 {
+            width: 800px;
+            font-size: 50px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            font-size: 30px;
+            color: white;
+            background-color: black;
+            border: 5px solid red;
+            float: left;
+            margin-left: 30px;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+        }
     </style>
 
 </head>
@@ -67,63 +83,23 @@
     <!-- /.container -->
 </nav>
 
-<!-- About Section -->
-<section id="about" class="container content-section text-center">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-            <h2>Meet Casey</h2>
-            <p>Hello there! add more text....</p>
-            <p>still talking about myself here</p>
-            <p>probably enough...</p>
-        </div>
-    </div>
-</section>
-
-<!-- Download Section -->
-<section id="download" class="content-section text-center">
-    <div class="download-section">
-        <div class="container">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Portfolio</h2>
-                <p>This is a work in progress.<br>
-                    It will be expanding as I have the time to start contributing more<br>
-                    I've benefited greatly over the years from Open Source code <br>
-                    and am thrilled to finally be able to contribute back to things that I use daily!</p>
-                <a href="https://github.com/caseyPav" class="btn btn-default btn-lg"><i
-                        class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="container content-section text-center">
-    <div class="row" >
-        <div class="col-lg-8 col-lg-offset-2">
-            <h1 data-box2d-passive="true">Contact Casey</h1>
-
-
-            <div class="box">Hire me! ...or just say hello</div>
-
-            <p class="glyphicon glyphicon-phone-alt box"> 330.519.9281 </p>
-
-            <ul class="list-inline banner-social-buttons">
-                <li>
-                    <span class="box"><a href="https://twitter.com/caseyPav85" class="btn btn-default btn-lg"><i
-                            class="fa fa-twitter fa-fw"></i> <span class="network-name"></span></a></span>
-                </li>
-                <li>
-                    <a href="mailto:caseyjpavelko@gmail.com" class="btn btn-default btn-lg"><i
-                            class="fa fa-envelope"></i> <span class="network-name"></span></a>
-                </li>
-                <li>
-                    <a href="https://linkedin.com/in/casey-pavelko-655126125" class="btn btn-default btn-lg"><i
-                            class="fa fa-linkedin"></i> <span class="network-name"></span></a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
+<div class="block small">Made with <a href="http://brm.io/matter-js/">Matter.js</a></div>
+<img class="block" src="http://i.imgur.com/Pg1W6QX.jpg"/>
+<div class="block">:)</div>
+<div class="block">It's HTML5!!</div>
+<div class="block share"><a href="https://twitter.com/intent/tweet?screen_name=michael_iriarte"
+                            class="twitter-mention-button" data-related="michael_iriarte">Tweet to Mika</a>
+    <script>!function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+        if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = p + '://platform.twitter.com/widgets.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }
+    }(document, 'script', 'twitter-wjs');</script>
+</div>
+<div id="debug"><p>Debug:</p></div>
 
 
 <!-- Footer -->
@@ -132,19 +108,12 @@
         <p></p>
     </div>
 </footer>
-
+<script src="js/mattertest.js"></script>
 <script src="vendor/jquery/jquery.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script type="text/javascript" src="js/jquery.box2D.js"></script>
-<script type="text/javascript" src="js/Box2D.js"></script>
+<script scr="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.8.0-alpha/matter.min.js"></script>
 <script src="js/grayscale.js"></script>
-<script>
-    $(document).ready(function() {
-        $("h1, div")
-                .box2d({'y-velocity':0 });
-    });
-</script>
 </body>
 
 </html>
