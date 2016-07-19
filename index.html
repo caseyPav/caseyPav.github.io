@@ -3,6 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
     <title>Box2D DOM animation in Javascript CSS3</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
 
         body {
@@ -105,17 +106,39 @@
 
 <body onresize="resize_canvas()" onload="setTimeout(init,5000);" screen_capture_injected="true">
 <canvas id="canvas"></canvas>
-<nav class="panel">
-    <p>Animating a web page (DOM) objects with <a href="http://code.google.com/p/box2dweb/">Box2D-Web</a>. View the
-        source to learn more on how it works.</p>
-    <p>DIVs are positioned with CSS3 transform so they are HW accelerated for perfomance. It's even performant on iPhone
-        and the iPad and allows rotation to be set.</p>
-    <p>All of the grey boxes are draggable, just press and drag.</p>
-    <p>I also created <a href="./Box2D DOM animation in Javascript CSS3_files/MouseAndTouch.js">MouseAndTouch.js</a> for
-        simplifying mixing touch and mouse move handling</p>
-    <button id="resetButton">Reset</button>
-    <button id="removeText">Remove this text</button>
-    <input type="checkbox" id="debugDraw">Debug drawing
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                Menu <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">
+                <i class="fa fa-play-circle"></i> <span class="light">Casey</span> Pavelko
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#about">Twitter</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#download">Github</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#contact">LinkedIn</a>
+                </li>
+            </ul>
+            <button id="resetButton">Reset</button>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
 </nav>
 
 <div id="container">
