@@ -4,18 +4,20 @@
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
     <title>Box2D DOM animation in Javascript CSS3</title>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans|Poiret+One" rel="stylesheet">
     <style type="text/css">
 
         body {
-            background-color: black;
+            background-color: #696969;
         }
 
         body, div {
             margin: 0;
             padding: 0;
             border: none;
-            color: #fff;
-            font-family: "American Typewriter";
+            color: #2b88ff;
+            font-family: "Noto+Sans";
+            font-size: 24px;
         }
 
         /* Set translateZ to trigger HW acc for CSS3 transforms */
@@ -28,7 +30,6 @@
             -moz-transform: translate3d(0, 0, 1px);
             -ms-transform: translate3d(0, 0, 1px);
             transform: translate3d(0, 0, 1px);
-            background-color: black;
             -webkit-perspective: 1000;
             -webkit-backface-visibility: hidden;
         }
@@ -59,18 +60,100 @@
 
         /* Styles for illustrating the example */
         a {
-            color: #FFF;
-            text-decoration: underline;
+            color: #1d9b6c;
+            text-decoration: none;
         }
 
-        div > * {
+        .mutable > * {
             margin: 10px;
         }
 
-        div {
+        .mutable {
             position: absolute;
-            background-color: #999;
+            border-radius: 25px;
             /* border: 1px solid #FFF; */
+        }
+
+        .light {
+            font-weight: 400;
+        }
+
+        .navbar-custom {
+            margin-bottom: 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            text-transform: uppercase;
+            font-family: Noto+Sans;
+        }
+
+        .navbar-custom .navbar-toggle {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.2);
+            font-size: 12px;
+        }
+
+        .navbar-custom .navbar-toggle:focus,
+        .navbar-custom .navbar-toggle:active {
+            outline: none;
+        }
+
+        .navbar-custom .navbar-brand {
+            font-weight: 700;
+        }
+
+        .navbar-custom .navbar-brand:focus {
+            outline: none;
+        }
+
+        .navbar-custom a {
+            color: white;
+        }
+
+        .navbar-custom .nav li a {
+            -webkit-transition: background 0.3s ease-in-out;
+            -moz-transition: background 0.3s ease-in-out;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .navbar-custom .nav li a:hover {
+            color: rgba(255, 255, 255, 0.8);
+            outline: none;
+            background-color: transparent;
+        }
+
+        .navbar-custom .nav li a:focus,
+        .navbar-custom .nav li a:active {
+            outline: none;
+            background-color: transparent;
+        }
+
+        .navbar-custom .nav li.active {
+            outline: none;
+        }
+
+        .navbar-custom .nav li.active a {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .navbar-custom .nav li.active a:hover {
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .navbar-custom {
+                padding: 20px 0;
+                border-bottom: none;
+                letter-spacing: 1px;
+                background: transparent;
+                -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+                -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+                transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+            }
+
+            .navbar-custom.top-nav-collapse {
+                padding: 0;
+                background: #d3d3d3;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            }
         }
     </style>
     <script type="text/javascript" async="" src="./Box2D DOM animation in Javascript CSS3_files/ga.js"></script>
@@ -104,8 +187,8 @@
     </script>
 
 
-<body onresize="resize_canvas()" onload="setTimeout(init,5000);" screen_capture_injected="true">
-<canvas id="canvas"></canvas>
+<body onload="setTimeout(init,5000);" screen_capture_injected="true">
+<canvas id="canvas" width="100" height="100"></canvas>
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -116,11 +199,8 @@
                 <i class="fa fa-play-circle"></i> <span class="light">Casey</span> Pavelko
             </a>
         </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
             <ul class="nav navbar-nav">
-                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                 <li class="hidden">
                     <a href="#page-top"></a>
                 </li>
@@ -133,37 +213,33 @@
                 <li>
                     <a class="page-scroll" href="#contact">LinkedIn</a>
                 </li>
+                <li>
+                    <a id="resetButton" href="#contact">Reset Page</a>
+                </li>
             </ul>
-            <button id="resetButton">Reset</button>
+
         </div>
-        <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container -->
 </nav>
 
-<div id="container">
+<div class="mutable" id="container">
     <article>
-        <div style="width: 800px; height: 120px; top: 0px; left: 0px; transform: translate(150px, 334px) rotate(31.41deg);">
-            <h1>Box2D</h1>
-            <p>A 2D Physics Engine for Games</p>
+
+        <div class="mutable" style="width:590px;top:140px;left:220px;height:200px;">
+            <p>Casey is a developer looking for work! He enjoys making the task of making a personal webpage way more
+                difficult than it needs to be... and kayaking. </p>
         </div>
-        <div style="width: 200px; height: 400px; top: 0px; left: 0px; transform: translate(5px, 253px) rotate(0deg);">
-            <ul>
-                <li><a href="http://box2d.org/about/">Twitter</a></li>
-                <li><a href="http://code.google.com/p/box2d/">Github</a></li>
-                <li><a href="http://box2d.org/documentation/">LinkedIn</a></li>
-            </ul>
+        <div class="mutable" style="width:70px;top:400px;left:280px;height:70px;">
+            <a href="https://linkedin.com/in/casey-pavelko-655126125"/>
+            <img src="./Box2D DOM animation in Javascript CSS3_files/linkedin_icon.png" width="65" height="65">
         </div>
-        <div style="width: 590px; top: 0px; left: 0px; height: 200px; transform: translate(678px, 333px) rotate(-333.79deg);">
-            <h1>Casey Pavelko</h1>
-            <p>Casey is a developer looking for work! He enjoys making the task of making a personal webpage way more difficult than it needs to be... and kayaking. </p>
+        <div class="mutable" style="width:70px;top:400px;left:380px;height:70px;">
+            <a href="https://twitter.com/caseyPav85"/>
+            <img src="./Box2D DOM animation in Javascript CSS3_files/twitter-bird-vector-400x400.png" width="65" height="65">
         </div>
-        <div style="width: 200px; top: 0px; left: 0px; height: 70px; transform: translate(1217px, 518px) rotate(270.02deg);">
-            <a href="http://www.twitter.com/paalsa">twitter.com/PaalSA</a>
-            <a href="http://paal.org/blog">paal.org/blog</a>
-        </div>
-        <div style="width: 200px; top: 0px; left: 0px; height: 200px; transform: translate(266px, 453px) rotate(0.03deg);">
-            <img src="./Box2D DOM animation in Javascript CSS3_files/IMG_2552-300x300.jpg" width="180" height="180">
+        <div class="mutable" style="width:70px;top:400px;left:480px;height:70px;">
+            <a href="https://github.com/caseyPav"/>
+            <img src="./Box2D DOM animation in Javascript CSS3_files/9310-github-social-icon-vector-icon-vector-eps.png" width="65" height="65">
         </div>
 
 
