@@ -2,42 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b251835b-dac0-4235-b848-4b8ec4c7afe1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/aboutcasey.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/aboutsite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/about.svg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/101-bouncing-balls.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/101-random-balls.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/area-events.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/betapitch.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/box2d-video.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/collisions.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/development-setup.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/forces-and-impulse.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/hello-world.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/img/fullstackoptimization-logo-114.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/img/jquery-logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/img/nameheader.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/img/twitter-bird-vector-400x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/jenga.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/linkstrangeness.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/nameheader.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/normal-passive-static.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/remove-elements.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/twitter-wall.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/img/f19n.png" afterPath="$PROJECT_DIR$/img/f19n.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/img/github-icon-black.svg" afterPath="$PROJECT_DIR$/img/github-icon-black.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/img/github-logo.png" afterPath="$PROJECT_DIR$/img/github-logo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/img/githubgood.png" afterPath="$PROJECT_DIR$/img/githubgood.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/img/gmail.png" afterPath="$PROJECT_DIR$/img/gmail.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/img/linkedin_icon.png" afterPath="$PROJECT_DIR$/img/linkedin_icon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/img/name.png" afterPath="$PROJECT_DIR$/img/name.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/img/subheading.svg" afterPath="$PROJECT_DIR$/img/subheading.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/img/text1.svg" afterPath="$PROJECT_DIR$/img/text1.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/img/twitter_circle_color-256.png" afterPath="$PROJECT_DIR$/img/twitter_circle_color-256.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/pasteboard.html" afterPath="$PROJECT_DIR$/pasteboard/pasteboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/subhead.png" afterPath="$PROJECT_DIR$/img/subhead.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pasteboard.html" afterPath="$PROJECT_DIR$/pasteboard.html" />
     </list>
     <ignored path="caseyPav.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,8 +27,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="65" column="29" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
+            <state relative-caret-position="289">
+              <caret line="105" column="37" selection-start-line="105" selection-start-column="37" selection-end-line="105" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -255,7 +221,7 @@
       <workItem from="1468884119461" duration="3980000" />
       <workItem from="1468893744221" duration="13449000" />
       <workItem from="1468938836957" duration="17463000" />
-      <workItem from="1468971326013" duration="437000" />
+      <workItem from="1468971326013" duration="1076000" />
     </task>
     <task id="LOCAL-00001" summary="right js this time">
       <created>1468884291772</created>
@@ -282,7 +248,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35335000" />
+    <option name="totallyTimeSpent" value="35974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1360" y="24" width="1920" height="1056" extended-state="6" />
@@ -524,8 +490,8 @@
     <entry file="file://$PROJECT_DIR$/examples/hello-world.html" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="65" column="29" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
+        <state relative-caret-position="289">
+          <caret line="105" column="37" selection-start-line="105" selection-start-column="37" selection-end-line="105" selection-end-column="37" />
           <folding />
         </state>
       </provider>

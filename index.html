@@ -3,7 +3,7 @@
 <head>
 
     <!-- lots left to do on this, source for this can be found here https://github.com/franzenzenhofer/box2d-jquery-->
-    <meta name="viewport" content="height=device-height,width=device-width,maximum-scale=0.8"/>
+    <meta name="viewport" content="height=device-height,width=device-width,initial-scale=0.8, maximum-scale=1.0"/>
     <title>Casey Pavelko</title>
     <meta name="description"
           content="Casey Pavelko portfolio site">
@@ -16,13 +16,13 @@
         @import url(https://fonts.googleapis.com/css?family=Open+Sans:700);
 
         body {
-            border: 0px solid #696969;
+            border: 0px solid #2a2a2a;
         }
 
         body {
             min-width: 100%;
             min-height: 100%;
-            background: #696969;
+            background: #2a2a2a;
             color: #2b88ff;
             text-decoration: none;
             font-family: "Open Sans";
@@ -61,8 +61,8 @@
         #subhead {
             margin: 0 auto;
             border: none;
-            top: 10px;
-            padding-left: 150px;
+            top: 70px;
+            padding-left: 300px;
             text-align: left;
         }
 
@@ -73,7 +73,7 @@
             top: 100px;
             right: 40px;
             border-radius: 50%;
-            border: 2px solid #696969 !important;
+            border: 2px solid #2a2a2a !important;
         }
 
         #twitter {
@@ -83,7 +83,7 @@
             top: 250px;
             right: 40px;
             border-radius: 50%;
-            border: 2px solid #696969 !important;
+            border: 2px solid #2a2a2a !important;
         }
 
         #linkedIn {
@@ -93,7 +93,7 @@
             top: 175px;
             right: 40px;
             border-radius: 50%;
-            border: 2px solid #696969 !important;
+            border: 2px solid #2a2a2a !important;
         }
 
         #gmail {
@@ -103,7 +103,7 @@
             top: 375px;
             right: 40px;
             border-radius: 50%;
-            border: 2px solid #696969 !important;
+            border: 2px solid #2a2a2a !important;
         }
 
         .box2d, h1, code {
@@ -135,9 +135,10 @@
 <body>
 <img data-box2d-static="true" id="name" src="img/name.png" width="280px" height="50px"/>
 <br>
-<img data-box2d-static="true" id="subhead" src="img/subhead.png" width="112px" height="16px"/>
 <br>
-<img class="box2d" id="aboutme" src="img/aboutcasey.png" data-box2d-restitution=".5"
+<img data-box2d-static="true" id="subhead" src="img/subhead.png" width="196px" height="28px"/>
+<br>
+<img data-box2d-passive="true" id="aboutme" src="img/aboutcasey.png" data-box2d-restitution=".5"
 
      target="_blank" width="110px" height="20px"/>
 <br>
