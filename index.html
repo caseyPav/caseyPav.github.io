@@ -1,99 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>testpostpleaseignore</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
-          type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
-    <!-- Theme CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
-
-</head>
-
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-<div class="navdiv">
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="glyphicon glyphicon-grain"></i> <span class="light">Casey</span> Pavelko
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About Me</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#download">Portfolio</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-</div>
-<div class="matterdiv">
-    <div class="block small">Made with <a href="http://brm.io/matter-js/">Matter.js</a></div>
-    <img class="block" src="http://i.imgur.com/Pg1W6QX.jpg"/>
-    <div class="block">:)</div>
-    <div class="block">It's HTML5!!</div>
-    <div class="block share"><a href="https://twitter.com/intent/tweet?screen_name=michael_iriarte"
-                                class="twitter-mention-button" data-related="michael_iriarte">Tweet to Mika</a>
-        <script>!function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-            if (!d.getElementById(id)) {
-                js = d.createElement(s);
-                js.id = id;
-                js.src = p + '://platform.twitter.com/widgets.js';
-                fjs.parentNode.insertBefore(js, fjs);
+<HEAD>
+    <style type="text/css">
+        html { height: 100%; width: 100%;  overflow: hidden; }
+        body {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            overflow:hidden;
+        }
+        #contactBackground{
+            position: absolute;
+            height:100%;
+            width: 100%;
+            border: 2px solid green;
+        }
+        #contactBackground:hover{
+            border: 2px solid red;}
+        #contact{
+            position: absolute;
+            height:15%;
+            top: 52%;
+            left:70%;
+            width: 10%;
+            background-size:20%,20%;
+        }
+        #onOff{
+            position: absolute;
+            height:15%;
+            top: 52%;
+            left:20%;
+            width: 10%;
+            background-size:20%,20%;
+        }
+        #onOff:hover{border: 2px solid red;}
+    </style><TITLE>Kewl!! Buttons and Links with Canvas</TITLE></HEAD>
+<script type="text/javascript">
+    window.addEventListener('load', canvas, false);
+    function canvas(){
+        var link="contact";
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext('2d');
+        canvas.width = document.body.clientWidth;
+        canvas.height = document.body.clientHeight;
+        contact = document.getElementById("contact");
+        onOff = document.getElementById("onOff");
+        document.getElementById("onOff").style.visibility="visible";
+        switchLinks(link);
+        function switchLinks(isLink){
+            if(isLink!="contact"){
+                document.getElementById("contact").style.visibility="hidden";
             }
-        }(document, 'script', 'twitter-wjs');</script>
-    </div>
-    <div id="debug"><p>Debug:</p></div>
-</div>
-
-<!-- Footer -->
-<footer>
-    <div class="container text-center">
-        <p></p>
-    </div>
-</footer>
-<script src="js/mattertest.js"></script>
-<script src="vendor/jquery/jquery.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script scr="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.8.0-alpha/matter.min.js"></script>
-<script src="js/grayscale.js"></script>
-</body>
-
-</html>
+            if(isLink=="contact"){
+                document.getElementById("contact").style.visibility="visible";
+            }
+        }
+        onOff.addEventListener("mousedown",contactFunction, false);
+        function contactFunction(){
+            if(link=="contact"){link="";}else{link="contact";}
+            switchLinks(link);
+        }
+    }
+</script><body>
+<canvas id="canvas" width="0" height="0">Your browser does not support the HTML 5 Canvas.
+</canvas>
+<span id="contact" style="display:hidden">
+<a  href="mailto:Dude your Awesome!"><img id="contactBackground" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQP5qi1TPhjAPOfbogNgppFdc4r1LoNmr5D1n-NBfr7ll3x9VlY9w" alt="Send a message" title="Email" /></a>
+</span>
+<img id="onOff" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXvh9Fej5ZhBQstjlSpQbRLx46h47KS2IO_WIfoyyrHk_essLU" style="display:hidden" />
+</body></HTML>
