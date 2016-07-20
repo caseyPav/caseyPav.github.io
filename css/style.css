@@ -1,11 +1,11 @@
 body {
-    border: 0px solid #2a2a2a;
+    border: 0px solid #515A5A  ;
 }
 
 body {
     min-width: 100%;
     min-height: 100%;
-    background: #2a2a2a;
+    background: #515A5A  ;
     color: #2b88ff;
     text-decoration: none;
     font-family: "Open Sans";
@@ -24,7 +24,7 @@ a:hover, a:visited, a:active {
 }
 
 [onclick] {
-    color: #2b2b2b;
+    color: #515A5A  ;
     text-decoration: none;
 }
 

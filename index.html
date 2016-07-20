@@ -11,44 +11,155 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="canonical" href="http://www.fullstackoptimization.com/box2d-jquery/">
     <meta name="robots" content="index, follow">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
+    <link rel="stylesheet" type="text/css" href="css/grayscale.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-iso.css">
     <style>
         @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
         @import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
         @import url(https://fonts.googleapis.com/css?family=Open+Sans:700);
+
+        body {
+            border: 0px solid #515A5A;
+        }
+
+        body {
+            min-width: 100%;
+            min-height: 100%;
+            background: #515A5A;
+            color: #2b88ff;
+            text-decoration: none;
+            font-family: "Open Sans";
+            font-size: 16px;
+        }
+
+        a {
+            color: #2b88ff;
+            text-decoration: underline;
+        }
+
+        a:hover, a:visited, a:active {
+            color: #2b88ff;
+            text-decoration: underline;
+
+        }
+
+        [onclick] {
+            color: #515A5A;
+            text-decoration: none;
+        }
+
+        h2 a {
+            text-decoration: none !important;
+        }
+
+        #github {
+            width: 64px;
+            border-radius: 50%;
+            position: absolute;
+            top: 125px;
+            right: 40px;
+            border-radius: 50%;
+            border: 2px solid #2a2a2a !important;
+        }
+
+        #twitter {
+            width: 64px;
+            border-radius: 50%;
+            position: absolute;
+            top: 275px;
+            right: 40px;
+            border-radius: 50%;
+            border: 2px solid #2a2a2a !important;
+        }
+
+        #linkedIn {
+            width: 64px;
+            border-radius: 50%;
+            position: absolute;
+            top: 425px;
+            right: 40px;
+            border-radius: 50%;
+            border: 2px solid #2a2a2a !important;
+        }
+
+        #gmail {
+            width: 64px;
+            border-radius: 50%;
+            position: absolute;
+            top: 575px;
+            right: 40px;
+            border-radius: 50%;
+            border: 2px solid #2a2a2a !important;
+        }
+
+        .box2d, h1, code {
+            cursor: hand;
+            cursor: pointer;
+        }
+
+        .navcontainer {
+            height: 70px;
+            position: absolute;
+            max-width: 100%;
+
+            border: 2px solid #515A5A !important;
+
+        }
+        #footer {
+            position:fixed;
+            left:0px;
+            bottom:0px;
+            height:30px;
+            width:100%;
+            background:#999;
+        }
+
     </style>
 </head>
+<div class="navcontainer bootstrap-iso">
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="glyphicon glyphicon-asterisk"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="glyphicon glyphicon-grain"></i> <span class="light">Casey</span> Pavelko
+                </a>
+            </div>
 
-
-<img data-box2d-static="true" id="name" src="img/name.png" width="325px" height="48px"/>
-<br>
-<br>
-<img data-box2d-static="true" id="subhead" src="img/subhead.png" width="196px" height="28px"/>
-<br>
-<br>
-<br>
-<a href="html/aboutme.html">
-    <img data-box2d-static="true" id="aboutme" src="img/aboutcasey.png" data-box2d-restitution=".5"
-
-         target="_blank" width="110px" height="20px"/></a>
-<br>
-<br>
-<a href="html/aboutsite.html">
-    <img data-box2d-static="true" id="aboutsite" src="img/aboutsite.png" data-box2d-restitution=".5"
-
-         target="_blank" width="125px" height="20px"/></a>
-<br>
-<a href="html/contact.html">
-    <img data-box2d-static="true" id="contact" src="img/contact.png" data-box2d-restitution=".5"
-
-         target="_blank" width="70px" height="13px"/></a>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About Me</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#download"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact Casey</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+</div>
 
 
 <a href="https://github.com/caseyPav" class="box2d" id="github" data-box2d-restitution=".5"
    data-box2d-shape="circle"
    target="_blank"><img src="img/github.png" width="64px" height="64px"></a>
 
-<a href="https://www.linkedin.com/in/casey-pavelko-655126125" class="box2d" id="linkedIn" data-box2d-restitution=".5"
+<a href="https://www.linkedin.com/in/casey-pavelko-655126125" class="box2d" id="linkedIn"
+   data-box2d-restitution=".5"
    data-box2d-shape="circle"
    target="_blank"><img src="img/linkedin.png" width="64px" height="64px"></a>
 
@@ -61,8 +172,17 @@
    target="_blank"><img src="img/gmail.png" width="64px" height="64px"></a>
 
 
+<footer id="footer" class="bootstrap-iso">
+    <div class="container text-center">
+        <p>&#x2116; &copy; Casey Pavelko 2016</p>
+    </div>
+</footer>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script src="./js/lib/jquery.box2d.min.js"></script>
+<!--<script src="./js/lib/jquery.min.js"></script>
+<script src="./js/lib/grayscale.js"></script>-->
+<script src="./js/lib/bootstrap.min.js"></script>
 <script>
     $('document').ready(function () {
         window.setTimeout(function () {

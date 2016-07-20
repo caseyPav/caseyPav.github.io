@@ -1,14 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
+    <!-- lots left to do on this, source for jquery box2d can be found here https://github.com/franzenzenhofer/box2d-jquery-->
+    <meta name="viewport"
+          content="width=420px, height=device-height, initial-scale=0.7, maximum-scale=1.0, user-scalable=0">
+    <title>Casey Pavelko</title>
+    <meta name="description"
+          content="Casey Pavelko portfolio site">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="canonical" href="http://www.fullstackoptimization.com/box2d-jquery/">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:700);
+    </style>
 </head>
-<body>
-to do
-
-use modal
 
 
+<img data-box2d-static="true" id="name" src="img/name.png" width="325px" height="48px"/>
+<br>
+<br>
+<img data-box2d-static="true" id="subhead" src="img/subhead.png" width="196px" height="28px"/>
+<br>
+<br>
+<br>
+<a href="html/aboutme.html">
+    <img data-box2d-static="true" id="aboutme" src="img/aboutcasey.png" data-box2d-restitution=".5"
+
+         target="_blank" width="110px" height="20px"/></a>
+<br>
+<br>
+<a href="html/aboutsite.html">
+    <img data-box2d-static="true" id="aboutsite" src="img/aboutsite.png" data-box2d-restitution=".5"
+
+         target="_blank" width="125px" height="20px"/></a>
+<br>
+<a href="html/contact.html">
+    <img data-box2d-static="true" id="contact" src="img/contact.png" data-box2d-restitution=".5"
+
+         target="_blank" width="70px" height="13px"/></a>
+
+
+<a href="https://github.com/caseyPav" class="box2d" id="github" data-box2d-restitution=".5"
+   data-box2d-shape="circle"
+   target="_blank"><img src="img/github.png" width="64px" height="64px"></a>
+
+<a href="https://www.linkedin.com/in/casey-pavelko-655126125" class="box2d" id="linkedIn" data-box2d-restitution=".5"
+   data-box2d-shape="circle"
+   target="_blank"><img src="img/linkedin.png" width="64px" height="64px"></a>
+
+<a href="https://twitter.com/caseyPav85" class="box2d" id="twitter" data-box2d-restitution=".5"
+   data-box2d-shape="circle"
+   target="_blank"><img src="img/twitter.png" width="64px" height="64px"></a>
+
+<a href="mailto:caseyjpavelko@gmail.com" class="box2d" id="gmail" data-box2d-restitution=".5"
+   data-box2d-shape="circle"
+   target="_blank"><img src="img/gmail.png" width="64px" height="64px"></a>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="./js/lib/jquery.box2d.min.js"></script>
+<script>
+    $('document').ready(function () {
+        window.setTimeout(function () {
+            $("h1, code, .box2d").box2d({'y-velocity': 9.8, 'x-velocity': -0.05, 'debug': false});
+        }, 500);
+    });
+</script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-34880400-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
 </body>
 </html>
