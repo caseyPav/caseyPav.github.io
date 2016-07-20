@@ -14,7 +14,7 @@
     <!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
     <link href="dist/css/flat-ui.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-iso.css">
-    <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
     <style>
 
 
@@ -28,26 +28,6 @@
             background: #95a5a6;
             color: #95a5a6;
             text-decoration: none;
-        }
-
-        a {
-            color: #2b88ff;
-            text-decoration: underline;
-        }
-
-        a:hover, a:visited, a:active {
-            color: #2b88ff;
-            text-decoration: underline;
-
-        }
-
-        [onclick] {
-            color: #95a5a6;
-            text-decoration: none;
-        }
-
-        h2 a {
-            text-decoration: none !important;
         }
 
         #github {
@@ -113,51 +93,100 @@
             width: 100%;
             background: #95a5a6;
             overflow: hidden;
+            border: 2px solid #95a5a6 !important;
         }
 
-        #name {
-            font-family: "Francois One, serif";
-            color: #ecf0f1;
+        .navbar {
+            border-radius: 0;
+            z-index: 1;
+        }
+
+        .navbar-new {
+            background-color: #23BAB5;
+            border-color: #0FA6A1;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .navbar-new .navbar-brand,
+        .navbar-new .navbar-brand:hover,
+        .navbar-new .navbar-brand:focus {
+            font-family: Montserrat;
+            font-weight: 700;
             font-size: 30pt;
-            margin-left: 40px;
-
+            color: #FFF;
+            z-index: 1;
         }
 
-        #navbackground {
-            border: none;
-            background: #2c3e50;
-
+        .navbar-new .navbar-nav > li > a {
+            color: #FFF;
+            z-index: 1;
         }
 
-        ul {
-            font-family: "Francois One, serif";
-            color: #34495e;
-            font-size: 20pt;
-            text-align: right;
+        .navbar-new .navbar-nav > li > a:hover,
+        .navbar-new .navbar-nav > li > a:focus {
+            background-color: #0FA6A1;
+            z-index: 1;
+        }
 
+        .navbar-new .navbar-nav > .active > a,
+        .navbar-new .navbar-nav > .active > a:hover,
+        .navbar-new .navbar-nav > .active > a:focus {
+            color: #FFF;
+            background-color: #0FA6A1;
+            z-index: 1;
+        }
+
+        .navbar-new .navbar-text {
+            font-family: Montserrat;
+            font-weight: 700;
+            font-size: 16pt;
+            color: #FFF;
+            z-index: 1;
+        }
+
+        .navbar-new .navbar-toggle {
+            border-color: #0FA6A1;
+            z-index: 1;
+        }
+
+        .navbar-new .navbar-toggle:hover,
+        .navbar-new .navbar-toggle:focus {
+            background-color: #0FA6A1;
+            z-index: 1;
+        }
+
+        .navbar-new .navbar-toggle .icon-bar {
+            background-color: #FFF;
+            z-index: 1;
         }
 
 
     </style>
 </head>
 <div class="navcontainer bootstrap-iso">
-    <div class="col-xs-12">
-        <nav class="navbar navbar-inverse" id="navbackground" role="navigation">
+    <nav class="navbar navbar-new" role="navigation">
+        <div class="container-fluid">
+            <!-- logo -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
                     <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" id="name" href="#">casey pavelko</a>
+                <a class="navbar-brand" href="#">Casey Pavelko</a>
             </div>
-            <div class="collapse navbar-collapse" id="navbar-collapse-01">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#fakelink">about</a></li>
-                    <li><a href="#fakelink">contact</a></li>
-
-            </div><!-- /.navbar-collapse -->
-        </nav><!-- /navbar -->
-    </div>
-</div> <!-- /row -->
+            <!-- menu -->
+            <div class="collapse navbar-collapse navbar-right" id="navbar1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/index.html">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Site</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </div>
 
 
@@ -187,11 +216,8 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script src="./js/lib/jquery.box2d.min.js"></script>
-<script src="dist/js/flat-ui.min.js"></script>
 
-<!--<script src="./js/lib/jquery.min.js"></script>
-<script src="./js/lib/grayscale.js"></script>-->
-<script src="./js/lib/bootstrap.min.js"></script>
+<script src="js/lib/bootstrap.min.js"></script>
 <script>
     $('document').ready(function () {
         window.setTimeout(function () {
