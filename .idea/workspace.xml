@@ -2,21 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b251835b-dac0-4235-b848-4b8ec4c7afe1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CHALLENGE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grunt_deprecated.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/about.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/f19n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/github-icon-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/github-logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/githubgood.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/githubgood.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/linkedin_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/subheading.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/text1.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/twitter_circle_color-256.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pasteboard.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="caseyPav.github.io.iws" />
@@ -41,8 +26,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="82" selection-start-line="5" selection-start-column="82" selection-end-line="5" selection-end-column="82" />
+            <state relative-caret-position="340">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -325,7 +310,7 @@
       <workItem from="1468884119461" duration="3980000" />
       <workItem from="1468893744221" duration="13449000" />
       <workItem from="1468938836957" duration="17463000" />
-      <workItem from="1468971326013" duration="7328000" />
+      <workItem from="1468971326013" duration="8112000" />
     </task>
     <task id="LOCAL-00001" summary="right js this time">
       <created>1468884291772</created>
@@ -352,7 +337,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42226000" />
+    <option name="totallyTimeSpent" value="43010000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1360" y="24" width="1920" height="1056" extended-state="6" />
@@ -675,8 +660,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="82" selection-start-line="5" selection-start-column="82" selection-end-line="5" selection-end-column="82" />
+        <state relative-caret-position="340">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
