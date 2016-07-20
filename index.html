@@ -1,170 +1,189 @@
 <!doctype html>
-<html>
-<head>
+<p>
+    <head>
 
-    <!-- lots left to do on this, source for jquery box2d can be found here https://github.com/franzenzenhofer/box2d-jquery-->
-    <meta name="viewport"
-          content="width=420px, height=device-height, initial-scale=0.7, maximum-scale=1.0, user-scalable=0">
-    <title>Casey Pavelko</title>
-    <meta name="description"
-          content="Casey Pavelko portfolio site">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="canonical" href="http://www.fullstackoptimization.com/box2d-jquery/">
-    <meta name="robots" content="index, follow">
-    <!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-iso.css">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
-    <style>
-
-
-        body {
-            border: 0px solid #95a5a6;
-        }
-
-        body {
-            min-width: 100%;
-            min-height: 100%;
-            background: #95a5a6;
-            color: #95a5a6;
-            text-decoration: none;
-        }
-
-        #github {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            position: absolute;
-            top: 125px;
-            right: 40px;
-            border-radius: 50%;
-            border: 2px solid #95a5a6 !important;
-        }
-
-        #twitter {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            position: absolute;
-            top: 275px;
-            right: 40px;
-            border-radius: 50%;
-            border: 2px solid #95a5a6 !important;
-        }
-
-        #linkedIn {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            position: absolute;
-            top: 425px;
-            right: 40px;
-            border-radius: 50%;
-            border: 2px solid #95a5a6 !important;
-        }
-
-        #gmail {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            position: absolute;
-            top: 575px;
-            right: 40px;
-            border-radius: 50%;
-            border: 2px solid #95a5a6 !important;
-        }
-
-        .box2d, h1, code {
-            cursor: hand;
-            cursor: pointer;
-        }
-
-        .navcontainer {
-
-            border: 2px solid #95a5a6 !important;
-            z-index: 50;
-        }
-
-        #footer {
-            position: fixed;
-            left: 0px;
-            bottom: 0px;
-            height: 30px;
-            width: 100%;
-            background: #95a5a6;
-            overflow: hidden;
-            border: 2px solid #95a5a6 !important;
-        }
-
-        .navbar {
-            border-radius: 0;
-            z-index: 1;
-        }
-
-        .navbar-new {
-            background-color: #23BAB5;
-            border-color: #0FA6A1;
-            width: 100%;
-            z-index: 1;
-        }
-
-        .navbar-new .navbar-brand,
-        .navbar-new .navbar-brand:hover,
-        .navbar-new .navbar-brand:focus {
-            font-family: Montserrat;
-            font-weight: 700;
-            font-size: 30pt;
-            color: #FFF;
-            z-index: 1;
-        }
-
-        .navbar-new .navbar-nav > li > a {
-            color: #FFF;
-            z-index: 1;
-        }
-
-        .navbar-new .navbar-nav > li > a:hover,
-        .navbar-new .navbar-nav > li > a:focus {
-            background-color: #0FA6A1;
-            z-index: 1;
-        }
-
-        .navbar-new .navbar-nav > .active > a,
-        .navbar-new .navbar-nav > .active > a:hover,
-        .navbar-new .navbar-nav > .active > a:focus {
-            color: #FFF;
-            background-color: #0FA6A1;
-            z-index: 1;
-        }
-
-        .navbar-new .navbar-text {
-            font-family: Montserrat;
-            font-weight: 700;
-            font-size: 16pt;
-            color: #FFF;
-            z-index: 1;
-        }
-
-        .navbar-new .navbar-toggle {
-            border-color: #0FA6A1;
-            z-index: 1;
-        }
-
-        .navbar-new .navbar-toggle:hover,
-        .navbar-new .navbar-toggle:focus {
-            background-color: #0FA6A1;
-            z-index: 1;
-        }
-
-        .navbar-new .navbar-toggle .icon-bar {
-            background-color: #FFF;
-            z-index: 1;
-        }
+        <!-- lots left to do on this, source for jquery box2d can be found here https://github.com/franzenzenhofer/box2d-jquery-->
+        <meta name="viewport"
+              content="width=420px, height=device-height, initial-scale=0.7, maximum-scale=1.0, user-scalable=0">
+        <title>Casey Pavelko</title>
+        <meta name="description"
+              content="Casey Pavelko portfolio site">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <link rel="canonical" href="http://www.fullstackoptimization.com/box2d-jquery/">
+        <meta name="robots" content="index, follow">
+        <!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-iso.css">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+        <style>
 
 
-    </style>
-</head>
+            body {
+                border: 0px solid #95a5a6;
+            }
+
+            body {
+                min-width: 100%;
+                min-height: 100%;
+                background: #95a5a6;
+                color: #95a5a6;
+                text-decoration: none;
+            }
+
+            span {
+                width: 70px;
+                height: 70px;
+                border: 2px #95a5a6;
+                cursor: pointer;
+            }
+
+            #github {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                position: absolute;
+                top: 400px;
+                left: 104px;
+                border-radius: 50%;
+                border: 2px solid #95a5a6 !important;
+            }
+
+            #twitter {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                position: absolute;
+                top: 400px;
+                left: 188px;
+                border-radius: 50%;
+                border: 2px solid #95a5a6 !important;
+            }
+
+            #linkedIn {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                position: absolute;
+                top: 400px;
+                left: 20px;
+                border-radius: 50%;
+                border: 2px solid #95a5a6 !important;
+            }
+
+            #gmail {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                position: absolute;
+                top: 400px;
+                left: 272px;
+                border-radius: 50%;
+                border: 2px solid #95a5a6 !important;
+            }
+
+            .ball {
+                width: 64px;
+                height: 64px;
+                background-color: #c0392b;
+                position: absolute;
+                top: 10px;
+                right: 0px;
+                border-radius: 50%;
+                border: 2px solid #95a5a6 !important;
+
+            }
+
+            .box2d, h1, code {
+                cursor: hand;
+                cursor: pointer;
+            }
+
+            .navcontainer {
+
+                border: 2px solid #95a5a6 !important;
+                z-index: 50;
+            }
+
+            #footer {
+                position: fixed;
+                left: 0px;
+                bottom: 0px;
+                height: 30px;
+                width: 100%;
+                background: #95a5a6;
+                overflow: hidden;
+                border: 2px solid #95a5a6 !important;
+            }
+
+            .navbar {
+                border-radius: 0;
+                z-index: 1;
+            }
+
+            .navbar-new {
+                background-color: #23BAB5;
+                border-color: #0FA6A1;
+                width: 100%;
+                z-index: 1;
+            }
+
+            .navbar-new .navbar-brand,
+            .navbar-new .navbar-brand:hover,
+            .navbar-new .navbar-brand:focus {
+                font-family: Montserrat;
+                font-weight: 700;
+                font-size: 30pt;
+                color: #FFF;
+                z-index: 1;
+            }
+
+            .navbar-new .navbar-nav > li > a {
+                color: #FFF;
+                z-index: 1;
+            }
+
+            .navbar-new .navbar-nav > li > a:hover,
+            .navbar-new .navbar-nav > li > a:focus {
+                background-color: #0FA6A1;
+                z-index: 1;
+            }
+
+            .navbar-new .navbar-nav > .active > a,
+            .navbar-new .navbar-nav > .active > a:hover,
+            .navbar-new .navbar-nav > .active > a:focus {
+                color: #FFF;
+                background-color: #0FA6A1;
+                z-index: 1;
+            }
+
+            .navbar-new .navbar-text {
+                font-family: Montserrat;
+                font-weight: 700;
+                font-size: 16pt;
+                color: #FFF;
+                z-index: 1;
+            }
+
+            .navbar-new .navbar-toggle {
+                border-color: #0FA6A1;
+                z-index: 1;
+            }
+
+            .navbar-new .navbar-toggle:hover,
+            .navbar-new .navbar-toggle:focus {
+                background-color: #0FA6A1;
+                z-index: 1;
+            }
+
+            .navbar-new .navbar-toggle .icon-bar {
+                background-color: #FFF;
+                z-index: 1;
+            }
+
+
+        </style>
+    </head>
 <div class="navcontainer bootstrap-iso">
-    <nav class="navbar navbar-new" role="navigation">
+    <nav class="navbar navbar-new navbar-fixed-top" role="navigation">
         <div class="container-fluid">
             <!-- logo -->
             <div class="navbar-header">
@@ -188,23 +207,26 @@
     </nav>
 </div>
 
+<span data-box2d-passive="true" class="box2d" id="github">
+<a href="https://github.com/caseyPav"><img src="img/github.png" width="64px" height="64px"></a>
+</span>
 
-<a href="https://github.com/caseyPav" class="box2d" id="github" data-box2d-restitution=".5"
-   data-box2d-shape="circle"
-   target="_blank"><img src="img/github.png" width="64px" height="64px"></a>
+<span data-box2d-passive="true" class="box2d" id="linkedIn">
+<a href="https://www.linkedin.com/in/casey-pavelko-655126125"><img src="img/linkedin.png" width="64px" height="64px"></a>
+</span>
 
-<a href="https://www.linkedin.com/in/casey-pavelko-655126125" class="box2d" id="linkedIn"
-   data-box2d-restitution=".5"
-   data-box2d-shape="circle"
-   target="_blank"><img src="img/linkedin.png" width="64px" height="64px"></a>
+<span data-box2d-passive="true" class="box2d" id="twitter">
+<a href="https://twitter.com/caseyPav85"><img src="img/twitter.png" width="64px" height="64px"></a>
+</span>
 
-<a href="https://twitter.com/caseyPav85" class="box2d" id="twitter" data-box2d-restitution=".5"
-   data-box2d-shape="circle"
-   target="_blank"><img src="img/twitter.png" width="64px" height="64px"></a>
+<span data-box2d-passive="true" class="box2d" id="gmail">
+<a href="mailto:caseyjpavelko@gmail.com"><img src="img/gmail.png" width="64px" height="64px"></a>
+</span>
 
-<a href="mailto:caseyjpavelko@gmail.com" class="box2d" id="gmail" data-box2d-restitution=".5"
+
+<p class="box2d ball" data-box2d-restitution=".5"
    data-box2d-shape="circle"
-   target="_blank"><img src="img/gmail.png" width="64px" height="64px"></a>
+   target="_blank" width="64px" height="64px"></p>
 
 
 <footer id="footer" class="bootstrap-iso">
