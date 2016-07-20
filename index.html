@@ -3,7 +3,8 @@
 <head>
 
     <!-- lots left to do on this, source for jquery box2d can be found here https://github.com/franzenzenhofer/box2d-jquery-->
-    <meta name="viewport" content="height=device-height,width=450, initial-scale=1 maximum-scale=1.0"/>
+    <meta name="viewport"
+          content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Casey Pavelko</title>
     <meta name="description"
           content="Casey Pavelko portfolio site">
@@ -19,23 +20,29 @@
 </head>
 
 
-<body>
-<img data-box2d-static="true" id="name" src="img/name.png" width="280px" height="50px"/>
+
+<img data-box2d-static="true" id="name" src="img/name.png" width="325px" height="48px"/>
 <br>
 <br>
 <img data-box2d-static="true" id="subhead" src="img/subhead.png" width="196px" height="28px"/>
 <br>
 <br>
 <br>
-<img data-box2d-static="false" id="aboutme" src="img/aboutcasey.png" data-box2d-restitution=".5"
+<a href="html/aboutme.html">
+    <img data-box2d-static="true" id="aboutme" src="img/aboutcasey.png" data-box2d-restitution=".5"
 
-     target="_blank" width="110px" height="20px"/>
+         target="_blank" width="110px" height="20px"/></a>
 <br>
 <br>
-<img data-box2d-static="false" id="aboutsite" src="img/aboutsite.png" data-box2d-restitution=".5"
+<a href="html/aboutsite.html">
+    <img data-box2d-static="true" id="aboutsite" src="img/aboutsite.png" data-box2d-restitution=".5"
 
-     target="_blank" width="125px" height="20px"/>
+         target="_blank" width="125px" height="20px"/></a>
 <br>
+<a href="html/contact.html">
+    <img data-box2d-static="true" id="contact" src="img/contact.png" data-box2d-restitution=".5"
+
+         target="_blank" width="70px" height="13px"/></a>
 
 
 <a href="https://github.com/caseyPav" class="box2d" id="github" data-box2d-restitution=".5"

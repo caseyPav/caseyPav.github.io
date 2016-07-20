@@ -107,7 +107,7 @@
                     collection[a]=clone[0]
                     $('body').append(clone);
                     //experiments for better rendering
-                    //window.setTimeout(function(){element.css('visibility','hidden');},0);
+                    window.setTimeout(function(){element.css('visibility','hidden');},0);
                     //windiw.setTimeout(function(){element.css('visibility','hidden');}, 0);
                 });
                 //return $(rA);

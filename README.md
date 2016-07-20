@@ -9,6 +9,10 @@ TO DO:
    browsers, requiring scrolling
 5. more stuff
 
+/////////////////////saving temporarily for reference//////////////////////////////////////////////
+http://stackoverflow.com/questions/20539196/creating-svg-elements-dynamically-with-javascript-inside-html
+https://developers.google.com/closure/compiler/
+
 
 
 
