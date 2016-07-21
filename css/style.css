@@ -1,5 +1,6 @@
 html{
     overflow: hidden;
+    position:fixed;
 }
 
 body {
@@ -293,6 +294,19 @@ span {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 
+}
+
+.modal-header-resume {
+    color: #fff;
+    padding: 9px 15px;
+    border-bottom: 1px solid #8e44ad;
+    background-color: #8e44ad;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .modal-body-about {

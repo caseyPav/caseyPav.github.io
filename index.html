@@ -33,6 +33,7 @@
                 <ul class="nav navbar-nav navbar-text">
                     <li class="active"><a href="/index.html">Reset</a></li>
                     <li><a data-toggle="modal" data-target="#about-me-modal">About</a></li>
+                    <li><a data-toggle="modal" data-target="#resume-modal">Resume</a></li>
                     <li><a data-toggle="modal" data-target="#contact-me-modal">Contact</a></li>
                 </ul>
             </div>
@@ -53,6 +54,32 @@
                         Lets discuss what <br>
                         we can accomplish together...<br>
                     </p>
+                </div>
+                <div class="modal-footer modal-footer-about">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+
+        $(document).ready(function () {
+            $('.resume-modal').click(function () {
+                $("#dialog").dialog();
+            });
+        });
+    </script>
+    <!-- Resume Modal -->
+    <div id="resume-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-header-resume">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <p class="modal-title navbar-name">Resume</p>
+                </div>
+                <div class="modal-body modal-body-resume" id="dialog" style="transform: none">
+                        <iframe src="Docs/CaseyPavelkoRESUME.pdf" width="100%" style="height: 75vh"></iframe>
                 </div>
                 <div class="modal-footer modal-footer-about">
 
@@ -150,6 +177,7 @@
         }, 100);
     });
 </script>
+
 <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-34880400-1']);
