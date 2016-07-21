@@ -1,6 +1,11 @@
+html{
+    overflow: hidden;
+}
+
 body {
     border: 0px solid #bdc3c7;
-    overflow: hidden;
+    position:fixed;
+
 }
 
 body {
@@ -19,8 +24,8 @@ span {
 }
 
 #github {
-    width: 64px;
-    height: 64px;
+    width: 128px;
+    height: 128px;
     border-radius: 50%;
     position: absolute;
     top: 0px;
@@ -30,8 +35,8 @@ span {
 }
 
 #twitter {
-    width: 64px;
-    height: 64px;
+    width: 128px;
+    height: 128px;
     border-radius: 50%;
     position: absolute;
     top: 0px;
@@ -41,8 +46,8 @@ span {
 }
 
 #linkedIn {
-    width: 64px;
-    height: 64px;
+    width: 128px;
+    height: 128px;
     border-radius: 50%;
     position: absolute;
     top: 0px;
@@ -52,8 +57,8 @@ span {
 }
 
 #gmail {
-    width: 64px;
-    height: 64px;
+    width: 128px;
+    height: 128px;
     border-radius: 50%;
     position: absolute;
     top: 0px;
