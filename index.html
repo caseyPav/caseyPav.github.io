@@ -1,276 +1,23 @@
 <!doctype html>
-<p>
-    <head>
+<head>
 
-        <!-- lots left to do on this, source for jquery box2d can be found here https://github.com/franzenzenhofer/box2d-jquery-->
-        <meta name="viewport"
-              content="width=420px, height=device-height, initial-scale=0.7, maximum-scale=1.0, user-scalable=0">
-        <title>Casey Pavelko</title>
-        <meta name="description"
-              content="Casey Pavelko portfolio site">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <link rel="canonical" href="http://www.fullstackoptimization.com/box2d-jquery/">
-        <meta name="robots" content="index, follow">
-        <!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
-        <link rel="stylesheet" type="text/css" href="css/bootstrap-iso.css">
-        <link href='https://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
-        <style>
+    <meta name="viewport"
+          content="width=420px, height=device-height, initial-scale=0.7, maximum-scale=1.0, user-scalable=0">
+    <title>Casey Pavelko</title>
+    <meta name="description"
+          content="Casey Pavelko's Portfolio Site">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="robots" content="index, follow">
 
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-iso.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
-            body {
-                border: 0px solid #95a5a6;
-            }
-
-            body {
-                min-width: 100%;
-                min-height: 100%;
-                background: #95a5a6;
-                color: #95a5a6;
-                text-decoration: none;
-            }
-
-            span {
-                width: 70px;
-                height: 70px;
-                border: 2px #95a5a6;
-                cursor: pointer;
-            }
-
-            #github {
-                width: 64px;
-                height: 64px;
-                border-radius: 50%;
-                position: absolute;
-                top: 0px;
-                right: 200px;
-                border-radius: 50%;
-                border: 2px solid #95a5a6 !important;
-            }
-
-            #twitter {
-                width: 64px;
-                height: 64px;
-                border-radius: 50%;
-                position: absolute;
-                top: 0px;
-                right: 100px;
-                border-radius: 50%;
-                border: 2px solid #95a5a6 !important;
-            }
-
-            #linkedIn {
-                width: 64px;
-                height: 64px;
-                border-radius: 50%;
-                position: absolute;
-                top: 0px;
-                right: 50px;
-                border-radius: 50%;
-                border: 2px solid #95a5a6 !important;
-            }
-
-            #gmail {
-                width: 64px;
-                height: 64px;
-                border-radius: 50%;
-                position: absolute;
-                top: 0px;
-                right: 150px;
-                border-radius: 50%;
-                border: 2px solid #95a5a6 !important;
-            }
-
-            .ball {
-                width: 64px;
-                height: 64px;
-                position: absolute;
-                top: 10px;
-                right: 50px;
-                border-radius: 50%;
-                border: 2px solid #95a5a6 !important;
-
-            }
-
-            .ball2 {
-                width: 64px;
-                height: 64px;
-                position: absolute;
-                top: 10px;
-                right: 100px;
-                border-radius: 50%;
-                border: 2px solid #95a5a6 !important;
-
-            }
-            .ball3 {
-                width: 64px;
-                height: 64px;
-                position: absolute;
-                top: 10px;
-                right: 200px;
-                border-radius: 50%;
-                border: 2px solid #95a5a6 !important;
-
-            }
-            .ball4 {
-                width: 64px;
-                height: 64px;
-                position: absolute;
-                top: 10px;
-                right: 300px;
-                border-radius: 50%;
-                border: 2px solid #95a5a6 !important;
-
-            }
-
-            #b1 {
-                background-color: #1abc9c;
-            }
-
-            #b2 {
-                background-color: #2ecc71;
-            }
-
-            #b3 {
-                background-color: #3498db;
-            }
-
-            #b4 {
-                background-color: #9b59b6;
-            }
-
-            #b5 {
-                background-color: #16a085;
-            }
-
-            #b6 {
-                background-color: #27ae60;
-            }
-
-            #b7 {
-                background-color: #2980b9;
-            }
-
-            #b8 {
-                background-color: #8e44ad;
-            }
-
-            #b9 {
-                background-color: #f1c40f;
-            }
-
-            #b10 {
-                background-color: #e67e22;
-            }
-
-            #b11 {
-                background-color: #e74c3c;
-            }
-
-            #b12 {
-                background-color: #f39c12;
-            }
-
-            #b13 {
-                background-color: #d35400;
-            }
-
-            #b14 {
-                background-color: #c0392b;
-            }
-
-            .box2d, h1, code {
-                cursor: hand;
-                cursor: pointer;
-            }
-
-            .navcontainer {
-
-                border: 2px solid #95a5a6 !important;
-                z-index: 50;
-            }
-
-            #footer {
-                position: fixed;
-                left: 0px;
-                bottom: 0px;
-                height: 30px;
-                width: 100%;
-                background: #95a5a6;
-                overflow: hidden;
-                border: 2px solid #95a5a6 !important;
-            }
-
-            .navbar {
-                border-radius: 0;
-                z-index: 1;
-            }
-
-            .navbar-new {
-                background-color: #23BAB5;
-                border-color: #0FA6A1;
-                width: 100%;
-                z-index: 1;
-            }
-
-            .navbar-new .navbar-brand,
-            .navbar-new .navbar-brand:hover,
-            .navbar-new .navbar-brand:focus {
-                font-family: Montserrat;
-                font-weight: 700;
-                font-size: 30pt;
-                color: #FFF;
-                z-index: 1;
-            }
-
-            .navbar-new .navbar-nav > li > a {
-                color: #FFF;
-                z-index: 1;
-            }
-
-            .navbar-new .navbar-nav > li > a:hover,
-            .navbar-new .navbar-nav > li > a:focus {
-                background-color: #0FA6A1;
-                z-index: 1;
-            }
-
-            .navbar-new .navbar-nav > .active > a,
-            .navbar-new .navbar-nav > .active > a:hover,
-            .navbar-new .navbar-nav > .active > a:focus {
-                color: #FFF;
-                background-color: #0FA6A1;
-                z-index: 1;
-            }
-
-            .navbar-new .navbar-text {
-                font-family: Montserrat;
-                font-weight: 700;
-                font-size: 16pt;
-                color: #FFF;
-                z-index: 1;
-            }
-
-            .navbar-new .navbar-toggle {
-                border-color: #0FA6A1;
-                z-index: 1;
-            }
-
-            .navbar-new .navbar-toggle:hover,
-            .navbar-new .navbar-toggle:focus {
-                background-color: #0FA6A1;
-                z-index: 1;
-            }
-
-            .navbar-new .navbar-toggle .icon-bar {
-                background-color: #FFF;
-                z-index: 1;
-            }
-
-        </style>
-    </head>
+</head>
 <div class="navcontainer bootstrap-iso">
     <nav class="navbar navbar-new navbar-fixed-top" role="navigation">
         <div class="container-fluid">
-            <!-- logo -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
                     <span class="sr-only">Toggle navigation</span>
@@ -278,18 +25,64 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Casey Pavelko</a>
+                <p class="navbar-name">Casey Pavelko</p>
             </div>
             <!-- menu -->
-            <div class="collapse navbar-collapse navbar-right" id="navbar1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="/index.html">Home</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Site</a></li>
+            <div class="collapse navbar-collapse navbar-right">
+                <ul class="nav navbar-nav navbar-text">
+                    <li class="active"><a href="/index.html">Reset</a></li>
+                    <li><a data-toggle="modal" data-target="#about-me-modal">About</a></li>
+                    <li><a data-toggle="modal" data-target="#contact-me-modal">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!-- About me Modal -->
+    <div id="about-me-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-header-about">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <p class="modal-title navbar-name">About Casey</p>
+                </div>
+                <div class="modal-body modal-body-about" style="text-align: center">
+                    <p id="about-text">Casey is a programmer looking for work...<br><br>
+
+                        Lets discuss what <br>
+                        we can accomplish together...<br>
+                    </p>
+                </div>
+                <div class="modal-footer modal-footer-about">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Contact me Modal -->
+    <div id="contact-me-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-header-contact">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <p class="modal-title navbar-name">Contact Casey</p>
+                </div>
+                <div class="modal-body modal-body-contact">
+                    <ul id="contact-text">
+                        <li><a href="https://github.com/caseyPav">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/casey-pavelko-655126125">LinkedIn</a></li>
+                        <li><a href="https://twitter.com/caseyPav85">Twitter</a></li>
+                        <li><a href="mailto:caseyjpavelko@gmail.com">Email</a></li>
+                    </ul>
+                </div>
+                <div class="modal-footer modal-footer-about">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
 
 <span data-box2d-passive="true" class="box2d" id="github">
@@ -311,47 +104,33 @@
 
 
 <p class="box2d ball" id="b1" data-box2d-restitution=".5"
-   data-box2d-shape="circle"
-   target="_blank" width="64px" height="64px"></p>
+   data-box2d-shape="circle"></p>
 <p class="box2d ball" id="b2" data-box2d-restitution=".5"
-   data-box2d-shape="circle"
-   target="_blank" width="64px" height="64px"></p>
+   data-box2d-shape="circle"></p>
 <p class="box2d ball" id="b3" data-box2d-restitution=".5"
-   data-box2d-shape="circle"
-   target="_blank" width="64px" height="64px"></p>
+   data-box2d-shape="circle"></p>
 <p class="box2d ball2" id="b4" data-box2d-restitution=".5"
-   data-box2d-shape="circle"
-   target="_blank" width="64px" height="64px"></p>
+   data-box2d-shape="circle"></p>
 <p class="box2d ball2" id="b5" data-box2d-restitution=".5"
-   data-box2d-shape="circle"
-   target="_blank" width="64px" height="64px"></p>
+   data-box2d-shape="circle"></p>
 <p class="box2d ball2" id="b6" data-box2d-restitution=".5"
-   data-box2d-shape="circle"
-   target="_blank" width="64px" height="64px"></p>
+   data-box2d-shape="circle"></p>
 <p class="box2d ball3" id="b7" data-box2d-restitution=".5"
-   data-box2d-shape="circle"
-   target="_blank" width="64px" height="64px"></p>
+   data-box2d-shape="circle"></p>
 <p class="box2d ball3" id="b8" data-box2d-restitution=".5"
-   data-box2d-shape="circle"
-   target="_blank" width="64px" height="64px"></p>
+   data-box2d-shape="circle"></p>
 <p class="box2d ball3" id="b9" data-box2d-restitution=".5"
-   data-box2d-shape="circle"
-   target="_blank" width="64px" height="64px"></p>
+   data-box2d-shape="circle"></p>
 <p class="box2d ball4" id="b10" data-box2d-restitution=".5"
-   data-box2d-shape="circle"
-   target="_blank" width="64px" height="64px"></p>
+   data-box2d-shape="circle"></p>
 <p class="box2d ball4" id="b11" data-box2d-restitution=".5"
-   data-box2d-shape="circle"
-   target="_blank" width="64px" height="64px"></p>
+   data-box2d-shape="circle"></p>
 <p class="box2d ball4" id="b12" data-box2d-restitution=".5"
-   data-box2d-shape="circle"
-   target="_blank" width="64px" height="64px"></p>
+   data-box2d-shape="circle"></p>
 <p class="box2d ball" id="b13" data-box2d-restitution=".5"
-   data-box2d-shape="circle"
-   target="_blank" width="64px" height="64px"></p>
+   data-box2d-shape="circle"></p>
 <p class="box2d ball2" id="b14" data-box2d-restitution=".5"
-   data-box2d-shape="circle"
-   target="_blank" width="64px" height="64px"></p>
+   data-box2d-shape="circle"></p>
 
 
 <div class="bootstrap-iso" id="footer">
@@ -359,17 +138,15 @@
         <p></p>
     </div>
 </div>
-
-
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
 <script src="js/lib/jquery.min.js"></script>
 <script src="./js/lib/jquery.box2d.min.js"></script>
 <script src="js/lib/bootstrap.min.js"></script>
+
 <script>
     $('document').ready(function () {
         window.setTimeout(function () {
-            $("h1, code, .box2d").box2d({'y-velocity': 9.8, 'x-velocity': -0.05, 'debug': false});
-        }, 500);
+            $(".box2d").box2d({'y-velocity': 9.8, 'x-velocity': -0.05, 'debug': false});
+        }, 100);
     });
 </script>
 <script type="text/javascript">
