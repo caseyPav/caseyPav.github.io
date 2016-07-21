@@ -29,7 +29,7 @@ span {
     height: 128px;
     border-radius: 50%;
     position: absolute;
-    top: 0px;
+    top: 150px;
     right: 240px;
 
     border: 2px solid #bdc3c7 !important;
@@ -41,7 +41,7 @@ span {
     border-radius: 50%;
     position: absolute;
     top: 0px;
-    right: 110px;
+    right: 100px;
 
     border: 2px solid #bdc3c7 !important;
 }
@@ -52,7 +52,7 @@ span {
     border-radius: 50%;
     position: absolute;
     top: 0px;
-    right: 68px;
+    left: 100px;
 
     border: 2px solid #bdc3c7 !important;
 }
@@ -63,7 +63,7 @@ span {
     border-radius: 50%;
     position: absolute;
     top: 0px;
-    right: 170px;
+    left: 240px;
 
     border: 2px solid #bdc3c7 !important;
 }
