@@ -1,13 +1,9 @@
 
 TO DO:
 
-1. FIX TOUCH LINKS!!!
-2. finish child pages
-3. refactor to clean up
-4. make world adaptable to changed resolutions after load, currently canvas locks to initial resolution,
-   this causes the mutable objects to end up just below the viewable screen area on some mobile
-   browsers, requiring scrolling
-5. more stuff
+mobile is really laggy...
+
+fix this, or make mobile redirect with fewer, larger mutable objects
 
 /////////////////////saving temporarily for reference//////////////////////////////////////////////
 http://stackoverflow.com/questions/20539196/creating-svg-elements-dynamically-with-javascript-inside-html

@@ -258,6 +258,10 @@ span {
     background-color: #FFF;
     z-index: 1;
 }
+.navbar-toggle {
+    background-color: transparent;
+    color: #f1c40f;
+}
 
 .modal-header-about {
     color: #fff;
