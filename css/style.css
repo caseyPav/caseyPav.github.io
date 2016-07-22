@@ -25,8 +25,8 @@ span {
 }
 
 #github-mobile {
-    width: 128px;
-    height: 128px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     position: absolute;
     bottom: 150px;
@@ -36,8 +36,8 @@ span {
 }
 
 #twitter-mobile {
-    width: 128px;
-    height: 128px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     position: absolute;
     bottom: 0px;
@@ -47,8 +47,8 @@ span {
 }
 
 #linkedIn-mobile {
-    width: 128px;
-    height: 128px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     position: absolute;
     bottom: 0px;
@@ -58,8 +58,8 @@ span {
 }
 
 #gmail-mobile {
-    width: 128px;
-    height: 128px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     position: absolute;
     bottom: 150px;
@@ -86,7 +86,6 @@ span {
     position: absolute;
     top: 270px;
     right: 258px;
-
 
     border: 2px solid transparent !important;
 }
@@ -596,4 +595,8 @@ span {
     display: inline-block;
     text-align: center;
     vertical-align: middle;
+}
+
+iframe::-webkit-scrollbar {
+    display: none;
 }
