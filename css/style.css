@@ -30,7 +30,7 @@ span {
     border-radius: 50%;
     position: absolute;
     top: 150px;
-    right: 240px;
+    right: 150px;
 
     border: 2px solid #bdc3c7 !important;
 }
@@ -63,7 +63,7 @@ span {
     border-radius: 50%;
     position: absolute;
     top: 150px;
-    left: 240px;
+    left: 150px;
 
     border: 2px solid #bdc3c7 !important;
 }
