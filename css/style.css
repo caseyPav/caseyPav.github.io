@@ -68,7 +68,7 @@ span {
     border: 2px solid transparent !important;
 }
 
-#b1 {
+.b1 {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -79,7 +79,7 @@ span {
     background-color: #1abc9c;
 }
 
-#b2 {
+.b2 {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -90,7 +90,7 @@ span {
     background-color: #2ecc71;
 }
 
-#b3 {
+.b3 {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -101,7 +101,7 @@ span {
     background-color: #3498db;
 }
 
-#b4 {
+.b4 {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -112,7 +112,7 @@ span {
     background-color: #9b59b6;
 }
 
-#b5 {
+.b5 {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -123,7 +123,7 @@ span {
     background-color: #16a085;
 }
 
-#b6 {
+.b6 {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -134,7 +134,7 @@ span {
     background-color: #27ae60;
 }
 
-#b7 {
+.b7 {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -145,7 +145,7 @@ span {
     background-color: #2980b9;
 }
 
-#b8 {
+.b8 {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -156,7 +156,7 @@ span {
     background-color: #8e44ad;
 }
 
-#b9 {
+.b9 {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -167,7 +167,7 @@ span {
     background-color: #f1c40f;
 }
 
-#b10 {
+.b10 {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -178,7 +178,7 @@ span {
     background-color: #e67e22;
 }
 
-#b11 {
+.b11 {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -189,7 +189,7 @@ span {
     background-color: #e74c3c;
 }
 
-#b12 {
+.b12 {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -200,7 +200,7 @@ span {
     background-color: #f39c12;
 }
 
-#b13 {
+.b13 {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -211,7 +211,7 @@ span {
     background-color: #d35400;
 }
 
-#b14 {
+.b14 {
     width: 64px;
     height: 64px;
     position: absolute;
