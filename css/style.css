@@ -24,12 +24,56 @@ span {
     cursor: pointer;
 }
 
-#github {
+#github-mobile {
     width: 128px;
     height: 128px;
     border-radius: 50%;
     position: absolute;
     top: 150px;
+    right: 100px;
+
+    border: 2px solid transparent !important;
+}
+
+#twitter-mobile {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    right: 100px;
+
+    border: 2px solid transparent !important;
+}
+
+#linkedIn-mobile {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 120px;
+
+    border: 2px solid transparent !important;
+}
+
+#gmail-mobile {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    position: absolute;
+    top: 150px;
+    left: 120px;
+
+    border: 2px solid transparent !important;
+}
+
+#github {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    position: absolute;
+    top: 70px;
     right: 100px;
 
     border: 2px solid transparent !important;
@@ -40,8 +84,8 @@ span {
     height: 128px;
     border-radius: 50%;
     position: absolute;
-    top: 0px;
-    right: 100px;
+    top: 70px;
+    right: 300px;
 
     border: 2px solid transparent !important;
 }
@@ -51,8 +95,8 @@ span {
     height: 128px;
     border-radius: 50%;
     position: absolute;
-    top: 0px;
-    left: 120px;
+    top: 70px;
+    left: 100px;
 
     border: 2px solid transparent !important;
 }
@@ -62,13 +106,13 @@ span {
     height: 128px;
     border-radius: 50%;
     position: absolute;
-    top: 150px;
-    left: 120px;
+    top: 70px;
+    left: 300px;
 
     border: 2px solid transparent !important;
 }
 
-.b1 {
+.b1m {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -79,7 +123,7 @@ span {
     background-color: #1abc9c;
 }
 
-.b2 {
+.b2m {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -90,7 +134,7 @@ span {
     background-color: #2ecc71;
 }
 
-.b3 {
+.b3m {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -101,7 +145,7 @@ span {
     background-color: #3498db;
 }
 
-.b4 {
+.b4m {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -112,7 +156,7 @@ span {
     background-color: #9b59b6;
 }
 
-.b5 {
+.b5m {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -123,7 +167,7 @@ span {
     background-color: #16a085;
 }
 
-.b6 {
+.b6m {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -134,7 +178,7 @@ span {
     background-color: #27ae60;
 }
 
-.b7 {
+.b7m {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -145,7 +189,7 @@ span {
     background-color: #2980b9;
 }
 
-.b8 {
+.b8m {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -156,7 +200,7 @@ span {
     background-color: #8e44ad;
 }
 
-.b9 {
+.b9m {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -167,7 +211,7 @@ span {
     background-color: #f1c40f;
 }
 
-.b10 {
+.b10m {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -178,7 +222,7 @@ span {
     background-color: #e67e22;
 }
 
-.b11 {
+.b11m {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -189,7 +233,7 @@ span {
     background-color: #e74c3c;
 }
 
-.b12 {
+.b12m {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -200,7 +244,7 @@ span {
     background-color: #f39c12;
 }
 
-.b13 {
+.b13m {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -211,12 +255,166 @@ span {
     background-color: #d35400;
 }
 
-.b14 {
+.b14m {
     width: 64px;
     height: 64px;
     position: absolute;
     top: 440px;
     left: 20px;
+    border-radius: 50%;
+    border: 2px solid transparent !important;
+    background-color: #c0392b;
+}
+
+.b1 {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 50%;
+    border: 2px solid transparent !important;
+    background-color: #1abc9c;
+}
+
+.b2 {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 50%;
+    border: 2px solid transparent !important;
+    background-color: #2ecc71;
+}
+
+.b3 {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 50%;
+    border: 2px solid transparent !important;
+    background-color: #3498db;
+}
+
+.b4 {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 50%;
+    border: 2px solid transparent !important;
+    background-color: #9b59b6;
+}
+
+.b5 {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 50%;
+    border: 2px solid transparent !important;
+    background-color: #16a085;
+}
+
+.b6 {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 50%;
+    border: 2px solid transparent !important;
+    background-color: #27ae60;
+}
+
+.b7 {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 50%;
+    border: 2px solid transparent !important;
+    background-color: #2980b9;
+}
+
+.b8 {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    border: 2px solid transparent !important;
+    background-color: #8e44ad;
+}
+
+.b9 {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    border: 2px solid transparent !important;
+    background-color: #f1c40f;
+}
+
+.b10 {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    border: 2px solid transparent !important;
+    background-color: #e67e22;
+}
+
+.b11 {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    border: 2px solid transparent !important;
+    background-color: #e74c3c;
+}
+
+.b12 {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    border: 2px solid transparent !important;
+    background-color: #f39c12;
+}
+
+.b13 {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    border: 2px solid transparent !important;
+    background-color: #d35400;
+}
+
+.b14 {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
     border-radius: 50%;
     border: 2px solid transparent !important;
     background-color: #c0392b;
