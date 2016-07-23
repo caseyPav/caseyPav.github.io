@@ -582,6 +582,13 @@ span {
     text-align: center;
 }
 
+@media (min-width: 768px) {
+    .modal-xl {
+        width: 90%;
+        max-width:1200px;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .modal:before {
         display: inline-block;
@@ -599,4 +606,9 @@ span {
 
 iframe::-webkit-scrollbar {
     display: none;
+}
+
+
+iframe{
+    overflow:hidden;
 }
