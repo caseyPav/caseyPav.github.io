@@ -1,385 +1,102 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <meta name="viewport"
-          content="width=device-width, height=device-height, initial-scale=0.7, maximum-scale=1.0, user-scalable=0">
     <title>Casey Pavelko</title>
-    <meta name="description"
-          content="Casey Pavelko's Portfolio Site">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="robots" content="index, follow">
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+    <link href="assets/landing.css" rel="stylesheet">
 
-    <script>
-        // Minified version of isMobile included in the HTML since it's small I KNOW I SHOULDNT USE THIS BUT THE DUMBASS WAY I BUILT THIS SITE REQUIRES IT!!!!!! LEGITIMATE EDGE CASE! https://github.com/kaimallea/isMobile
-        !function(a){var b=/iPhone/i,c=/iPod/i,d=/iPad/i,e=/(?=.*\bAndroid\b)(?=.*\bMobile\b)/i,f=/Android/i,g=/(?=.*\bAndroid\b)(?=.*\bSD4930UR\b)/i,h=/(?=.*\bAndroid\b)(?=.*\b(?:KFOT|KFTT|KFJWI|KFJWA|KFSOWI|KFTHWI|KFTHWA|KFAPWI|KFAPWA|KFARWI|KFASWI|KFSAWI|KFSAWA)\b)/i,i=/IEMobile/i,j=/(?=.*\bWindows\b)(?=.*\bARM\b)/i,k=/BlackBerry/i,l=/BB10/i,m=/Opera Mini/i,n=/(CriOS|Chrome)(?=.*\bMobile\b)/i,o=/(?=.*\bFirefox\b)(?=.*\bMobile\b)/i,p=new RegExp("(?:Nexus 7|BNTV250|Kindle Fire|Silk|GT-P1000)","i"),q=function(a,b){return a.test(b)},r=function(a){var r=a||navigator.userAgent,s=r.split("[FBAN");return"undefined"!=typeof s[1]&&(r=s[0]),s=r.split("Twitter"),"undefined"!=typeof s[1]&&(r=s[0]),this.apple={phone:q(b,r),ipod:q(c,r),tablet:!q(b,r)&&q(d,r),device:q(b,r)||q(c,r)||q(d,r)},this.amazon={phone:q(g,r),tablet:!q(g,r)&&q(h,r),device:q(g,r)||q(h,r)},this.android={phone:q(g,r)||q(e,r),tablet:!q(g,r)&&!q(e,r)&&(q(h,r)||q(f,r)),device:q(g,r)||q(h,r)||q(e,r)||q(f,r)},this.windows={phone:q(i,r),tablet:q(j,r),device:q(i,r)||q(j,r)},this.other={blackberry:q(k,r),blackberry10:q(l,r),opera:q(m,r),firefox:q(o,r),chrome:q(n,r),device:q(k,r)||q(l,r)||q(m,r)||q(o,r)||q(n,r)},this.seven_inch=q(p,r),this.any=this.apple.device||this.android.device||this.windows.device||this.other.device||this.seven_inch,this.phone=this.apple.phone||this.android.phone||this.windows.phone,this.tablet=this.apple.tablet||this.android.tablet||this.windows.tablet,"undefined"==typeof window?this:void 0},s=function(){var a=new r;return a.Class=r,a};"undefined"!=typeof module&&module.exports&&"undefined"==typeof window?module.exports=r:"undefined"!=typeof module&&module.exports&&"undefined"!=typeof window?module.exports=s():"function"==typeof define&&define.amd?define("isMobile",[],a.isMobile=s()):a.isMobile=s()}(this);
-
-
-        (function () {
-            var MOBILE_SITE = '/thisMakesMeFeelBadAndItShould/ugh.html', // site to redirect to
-                    NO_REDIRECT = 'noredirect'; // cookie to prevent redirect
-
-            if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
-
-                if ( document.cookie.indexOf(NO_REDIRECT) === -1 ) {
-                    document.location = MOBILE_SITE;
-                }
-            }
-        })();
-    </script>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-iso.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
 <body>
-<div class="navcontainer bootstrap-iso">
-    <nav class="navbar navbar-new navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <p class="navbar-name">Casey Pavelko</p>
-            </div>
-            <!-- menu -->
-            <div class="collapse navbar-collapse navbar-right">
-                <ul class="nav navbar-nav navbar-text">
-                    <li class="active"><a href="/index.html">Reset</a></li>
-                    <li><a data-toggle="modal" data-target="#about-me-modal">About</a></li>
-                    <li><a data-toggle="modal" data-target="#resume-modal">Resume</a></li>
-                    <li><a data-toggle="modal" data-target="#contact-me-modal">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- About me Modal -->
-    <div id="about-me-modal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header modal-header-about">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <p class="modal-title navbar-name">About Casey</p>
-                </div>
-                <div class="modal-body modal-body-about" style="text-align: center">
-                    <p id="about-text">Casey is a programmer looking for work...<br><br>
-
-                        Let's discuss what <br>
-                        we can accomplish together...<br>
-                    </p>
-                </div>
-                <div class="modal-footer modal-footer-about">
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <script>
 
 
-    </script>
-    <!-- Resume Modal -->
-    <div id="resume-modal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header modal-header-resume">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <p class="modal-title navbar-name">Resume</p>
-                </div>
-                <div class="modal-body modal-body-resume" id="dialog" style="transform: none">
-                    <iframe src="https://docs.google.com/document/d/1BQc8m6swnpmlIEuAd23kvxBJlMyUM4uk48n0x5X902I/pub?embedded=true" frameborder="0" width="100%" style="height: 75vh"></iframe>
-                </div>
-                <div class="modal-footer modal-footer-about">
+<div
+        class="parallax-image-wrapper"
+        data-anchor-target="#page-intro"
+        data-bottom-top="transform:translateY(200%)"
+        data-top-bottom="transform:translateY(0)">
 
-                </div>
-            </div>
+    <div
+            class="parallax-image"
+            style="background-image:url(Paul_Jenkins_Phenomena_Heart_of_the_Matter.jpg)"
+            data-anchor-target="#page-intro"
+            data-bottom-top="transform: translateY(-80%);"
+            data-top-bottom="transform: translateY(80%);"
+    >
 
-        </div>
-    </div>
-    <!-- Contact me Modal -->
-    <div id="contact-me-modal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header modal-header-contact">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <p class="modal-title navbar-name">Contact Casey</p>
-                </div>
-                <div class="modal-body modal-body-contact">
-                    <ul id="contact-text">
-                        <a href="https://github.com/caseyPav">GitHub</a><br>
-                        <a href="https://www.linkedin.com/in/casey-pavelko-655126125">LinkedIn</a><br>
-                        <a href="https://twitter.com/caseyPav85">Twitter</a><br>
-                        <a href="mailto:caseyjpavelko@gmail.com">Email</a>
-                    </ul>
-                </div>
-                <div class="modal-footer modal-footer-about">
-
-                </div>
-            </div>
-
-        </div>
     </div>
 </div>
 
-<span data-box2d-passive="true" class="box2d" id="github">
-<a href="https://github.com/caseyPav"><img src="img/github.png" width="128px" height="128px"></a>
-</span>
 
-<span data-box2d-passive="true" class="box2d" id="linkedIn">
-<a href="https://www.linkedin.com/in/casey-pavelko-655126125"><img src="img/linkedin.png" width="128px"
-                                                                   height="128px"></a>
-</span>
+<div id="skrollr-body">
 
-<span data-box2d-passive="true" class="box2d" id="twitter">
-<a href="https://twitter.com/caseyPav85"><img src="img/twitter.png" width="128px" height="128px"></a>
-</span>
+    <div id="page-intro" class="gap">
+        <h1>Casey Pavelko</h1>
 
-<span data-box2d-passive="true" class="box2d" id="gmail">
-<a href="mailto:caseyjpavelko@gmail.com"><img src="img/gmail.png" width="128px" height="128px"></a>
-</span>
-
-
-<p class="box2d b1" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b2" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b3" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b4" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b5" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b6" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b7" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b8" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b9" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b10" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b11" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b12" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b13" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b14" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-
-<p class="box2d b1" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b2" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b3" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b4" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b5" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b6" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b7" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b8" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b9" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b10" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b11" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b12" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b13" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b14" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-
-<p class="box2d b1" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b2" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b3" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b4" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b5" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b6" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b7" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b8" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b9" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b10" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b11" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b12" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b13" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b14" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-
-<p class="box2d b1" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b2" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b3" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b4" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b5" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b6" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b7" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b8" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b9" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b10" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b11" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b12" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b13" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b14" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-
-<p class="box2d b1" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b2" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b3" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b4" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b5" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b6" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b7" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b8" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b9" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b10" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b11" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b12" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b13" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b14" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-
-<p class="box2d b1" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b2" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b3" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b4" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b5" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b6" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b7" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b8" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b9" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b10" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b11" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b12" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b13" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-<p class="box2d b14" data-box2d-restitution="1"
-   data-box2d-shape="circle"></p>
-
-<p class="box2d b1" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b2" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b3" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b4" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b5" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b6" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b7" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b8" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b9" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b10" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b11" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b12" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b13" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-<p class="box2d b14" data-box2d-restitution=".5"
-   data-box2d-shape="circle"></p>
-
-
-<div class="bootstrap-iso" id="footer">
-    <div class="container">
-        <p></p>
     </div>
+
+
+    <footer>
+
+        <div class="footer-left">
+
+            <h3>Casey Pavelko</h3>
+
+            <p class="footer-links">
+                <a href="index.html">Home</a>
+                ·
+                <a href="https://github.com/caseyPav">Github</a>
+                ·
+                <a href="https://www.linkedin.com/in/casey-pavelko-655126125">LinkedIn</a>
+                ·
+                <a href="https://twitter.com/caseyPav85">Twitter</a>
+                ·
+                <a href="mailto:caseyjpavelko@gmail.com">Email</a>
+                ·
+                <a href="https://cloudspace.idrsolutions.com:8181/HTML_Page_Extraction/output/c1f9987b-1b06-48c3-92df-257f89edb03e/CaseyPavelkoResume__2_/index.html?page=1">Resume</a>
+                ·
+                <a href="boxIndex.html">Box2d Version</a>
+
+            <p class="footer-links" style="display: inherit" onclick="myFunction()">Image Credits</p>
+            </p>
+
+        </div>
+
+        <div class="footer-right" id="img-credit" >
+            <p>Background Image is a work from artist Paul Jenkins
+                "Phenomena" series of paintings, which he began in 1960
+                and continued until his death in 2012.
+                If you happen to be in the Youngstown, OH area
+                the Butler Institute of American Art holds
+                a wonderful collection of his works.
+            </p>
+        </div>
+
+    </footer>
+
+
 </div>
-<script src="js/lib/jquery.min.js"></script>
-<script src="./js/lib/jquery.box2d.min.js"></script>
-<script src="js/lib/bootstrap.min.js"></script>
+
+<script src="assets/skrollr.min.js"></script>
 
 <script>
-    $('document').ready(function () {
-        window.setTimeout(function () {
-            $(".box2d").box2d({'y-velocity': 9.8, 'x-velocity': -0.05, 'debug': false});
-        }, 100);
-    });
+    function myFunction() {
+        document.getElementById("img-credit").style.display = "block";
+    }
 </script>
 
-<script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-34880400-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function () {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-    })();
+<script>
+    skrollr.init();
 </script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
 </body>
 </html>
