@@ -1,9 +1,9 @@
 
 TO DO:
 
-mobile is really laggy...
+made landing page as box2d site was too unpredictable across various platforms.
 
-fix this, or make mobile redirect with fewer, larger mutable objects
+leave this alone for awhile. it looks nice and says what it needs to.
 
 /////////////////////saving temporarily for reference//////////////////////////////////////////////
 http://stackoverflow.com/questions/20539196/creating-svg-elements-dynamically-with-javascript-inside-html
